@@ -2,6 +2,8 @@
 
 **End to end predictive maintenance, reliability modeling and cloud deployment using NASA C MAPSS.**
 
+**Cloud deployment validated on AWS.** Stage 3 was provisioned, executed and validated as a real cloud LAB implementation.
+
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-serving-009688)
 ![AWS](https://img.shields.io/badge/AWS-validated%20LAB-FF9900)
@@ -58,6 +60,8 @@ flowchart TB
 
 [Local architecture](docs/stage2_architecture.md) · [AWS architecture](docs/stage3_architecture_plan.md)
 
+The AWS LAB configuration shown above was actually provisioned and validated, including cloud replay, persistence and controlled task recovery.
+
 ## Dashboard
 
 ![Dashboard](docs/assets/screenshots/dashboard_main.png)
@@ -111,11 +115,29 @@ These results are limited to FD001 and the recorded configuration. Bytes are acc
 
 FastAPI persists predictions and alerts. Streamlit retrieves records through `/api/v1/predictions` and `/api/v1/alerts`, without direct database access or silent historical recomputation. API failures are explicit; API mode has no local scientific fallback.
 
-## AWS deployment
+## AWS Cloud Deployment
+
+**AWS deployment status: VALIDATED — LAB.** The infrastructure was created and the application was executed on AWS. ECS containers connected to private RDS PostgreSQL, persisted prediction history, served the API and dashboard, and passed the documented Stage 3 validation workflow.
 
 The temporary **LAB** uses ECR, ECS Fargate, private encrypted RDS PostgreSQL, Secrets Manager, CloudWatch, IAM, VPC and Security Groups, defined with Terraform. Two containers share one image; Streamlit reaches FastAPI through loopback within the task.
 
 Public ports are restricted to the operator CIDR; database ingress is restricted to the application Security Group. The LAB has no ALB, NAT Gateway, autoscaling or additional replicas. Restricted HTTP access, dynamic IPv4 and no application authentication limit its scope.
+
+### Real AWS deployment evidence
+
+#### Amazon ECS
+
+![Amazon ECS LAB deployment](docs/assets/results/aws_ecs_deployment.png)
+
+Active ECS LAB service: one running task, zero pending tasks, successful deployment status, and recorded CPU/memory metrics.
+
+#### Amazon RDS
+
+![Amazon RDS PostgreSQL LAB deployment](docs/assets/results/aws_rds_deployment.png)
+
+Private RDS PostgreSQL instance used by the validated deployment: available, db.t4g.micro, sa-east-1, with Secrets Manager configured. Sensitive identifiers are redacted.
+
+These console screenshots complement the [E2E evidence](#end-to-end-validation), [container health evidence](docs/assets/results/ecs_health.png) and [recovery validation](#failure-recovery). They document a simulated-benchmark LAB, not industrial production or real operational safety.
 
 ## End to end validation
 

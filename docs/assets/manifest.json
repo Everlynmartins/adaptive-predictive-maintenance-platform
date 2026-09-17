@@ -70,5 +70,17 @@
     "source": "reports/telemetry_filtering/figures/bytes_vs_pr_auc.png",
     "caption": "Existing scientific figure: estimated bytes versus PR AUC. Copied without altering the figure.",
     "sha256": "4ad00a5f01b9a844167c90b44cad80dd96253348580e8e724794c3c0d4463304"
+  },
+  {
+    "file": "results/aws_ecs_deployment.png",
+    "source": "aws_status.png",
+    "caption": "AWS Console: active ECS LAB service, one desired/running task, zero pending tasks, successful deployment and CPU/memory metrics. Sensitive identifiers are already redacted.",
+    "sha256": "c60f745174854cc224bdde02bb51be9e46b3b8eb80938797b43d0322404b5a3e"
+  },
+  {
+    "file": "results/aws_rds_deployment.png",
+    "source": "aws_rds.png",
+    "caption": "AWS Console: available RDS PostgreSQL db.t4g.micro instance in sa-east-1 and configured Secrets Manager. Sensitive identifiers are already redacted.",
+    "sha256": "1f5157453854e962cf90cd2fad5211b3f7b2c9c49f3e9efcbc57cc045a7ad6a3"
   }
 ]

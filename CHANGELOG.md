@@ -2,6 +2,12 @@
 
 ## [0.16.0] - 2026-09-16
 
+- Added reviewed, already-redacted AWS Console screenshots for ECS and RDS,
+  with source filenames and SHA256 hashes in the assets manifest. The README
+  now highlights the real validated Stage 3 LAB deployment and connects the
+  console evidence to existing E2E, container health and recovery evidence.
+  No scientific results, models, frozen artifacts or runtime behavior changed.
+
 - 2026-09-17 — Portfolio publication preparation: English project landing page,
   case study, reviewed screenshot gallery and publication checklist. Excluded
   original imports, PDFs, local credentials, logs and Terraform state/inputs

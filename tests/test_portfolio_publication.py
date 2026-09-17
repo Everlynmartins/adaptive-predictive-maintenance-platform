@@ -23,7 +23,7 @@ def test_public_documentation_relative_links_exist():
 def test_reviewed_images_match_manifest_and_originals():
     assets = ROOT / "docs/assets"
     manifest = json.loads((assets / "manifest.json").read_text(encoding="utf-8"))
-    assert len(manifest) == 12
+    assert len(manifest) == 14
     for item in manifest:
         content = (assets / item["file"]).read_bytes()
         assert content.startswith(b"\x89PNG\r\n\x1a\n")
