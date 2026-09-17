@@ -1,0 +1,50 @@
+__pycache__/
+*.py[cod]
+.venv/
+.tools/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+.ipynb_checkpoints/
+.env
+.env.*
+!.env.example
+# Private publication inputs: only reviewed copies in docs/assets are public.
+/portfolio/
+*.log
+*.pem
+*.key
+*.pfx
+*.p12
+credentials
+credentials.json
+# Local Terraform state and inputs must never be published.
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+*.tfvars.json
+# Commercial standards and original PDF inputs are not distributed.
+*.pdf
+/data/raw/*
+!/data/raw/.gitkeep
+/data/interim/*
+!/data/interim/.gitkeep
+/data/processed/*
+!/data/processed/.gitkeep
+/predmain.zip
+
+# Terraform local state, local values and crash artifacts. Keep the provider
+# dependency lock file under version control after reviewed initialization.
+/infra/aws/.terraform/
+/infra/aws/terraform.tfstate
+/infra/aws/terraform.tfstate.*
+/infra/aws/terraform.tfvars
+/infra/aws/*.tfplan
+/infra/aws/crash.log
+/infra/aws/crash.*.log

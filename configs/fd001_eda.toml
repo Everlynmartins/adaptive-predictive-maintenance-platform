@@ -1,0 +1,11 @@
+[targets]
+failure_horizon = 30
+critical_horizon = 15
+
+[eda]
+# Heurísticas exploratórias; não são thresholds operacionais nem seleção final.
+near_constant_dominant_fraction = 0.95
+near_constant_max_unique = 2
+trend_min_absolute_median_rho = 0.5
+trend_min_direction_agreement = 0.8
+normalized_life_points = 101

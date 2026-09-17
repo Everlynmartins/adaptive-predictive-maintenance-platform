@@ -1,0 +1,205 @@
+test_grouped_oof_train_only_healthy_region_and_artifacts (test_anomaly_detection_pipeline.AnomalyPipelineTests.test_grouped_oof_train_only_healthy_region_and_artifacts) ... ok
+test_requirements_matrix_and_test_references_are_consistent (test_assurance_traceability.TraceabilityTests.test_requirements_matrix_and_test_references_are_consistent) ... ok
+test_feature_artifact_round_trip_preserves_transform (test_causal_features.CausalFeatureTests.test_feature_artifact_round_trip_preserves_transform) ... ok
+test_forbidden_fields_are_absent_and_constants_are_train_selected (test_causal_features.CausalFeatureTests.test_forbidden_fields_are_absent_and_constants_are_train_selected) ... ok
+test_future_suffix_cannot_change_existing_features (test_causal_features.CausalFeatureTests.test_future_suffix_cannot_change_existing_features) ... ok
+test_nonfinite_telemetry_is_rejected (test_causal_features.CausalFeatureTests.test_nonfinite_telemetry_is_rejected) ... ok
+test_windows_and_accumulation_never_cross_unit_id (test_causal_features.CausalFeatureTests.test_windows_and_accumulation_never_cross_unit_id) ... ok
+test_grouped_folds_are_reproducible_disjoint_and_complete (test_classical_ml_pipeline.ClassicalPipelineTests.test_grouped_folds_are_reproducible_disjoint_and_complete) ... ok
+test_pipeline_uses_only_train_validation_and_writes_separate_artifacts (test_classical_ml_pipeline.ClassicalPipelineTests.test_pipeline_uses_only_train_validation_and_writes_separate_artifacts) ... ok
+test_exploratory_threshold_metrics_use_explicit_threshold (test_classical_models.ClassicalModelTests.test_exploratory_threshold_metrics_use_explicit_threshold) ... ok
+test_invalid_input_returns_explicit_unavailable_status (test_classical_models.ClassicalModelTests.test_invalid_input_returns_explicit_unavailable_status) ... ok
+test_save_load_reproduces_predictions_and_configuration (test_classical_models.ClassicalModelTests.test_save_load_reproduces_predictions_and_configuration) ... ok
+test_scores_bounds_reproducibility_and_horizon_contract (test_classical_models.ClassicalModelTests.test_scores_bounds_reproducibility_and_horizon_contract) ... ok
+test_target_horizon_must_equal_model_horizon (test_classical_models.ClassicalModelTests.test_target_horizon_must_equal_model_horizon) ... ok
+test_training_summary_records_class_and_unit_weighting (test_classical_models.ClassicalModelTests.test_training_summary_records_class_and_unit_weighting) ... ok
+test_all_interfaces_import_and_remain_abstract (test_contracts.ContractTests.test_all_interfaces_import_and_remain_abstract) ... ok
+test_extension_packages_import (test_contracts.ContractTests.test_extension_packages_import) ... ok
+test_load_is_a_class_method (test_contracts.ContractTests.test_load_is_a_class_method) ... ok
+test_python_requirement_and_changelog_match_project (test_contracts.ContractTests.test_python_requirement_and_changelog_match_project) ... ok
+test_risk_and_health_reject_invalid_scores (test_contracts.ContractTests.test_risk_and_health_reject_invalid_scores) ... ok
+test_standard_output_and_optional_extensions (test_contracts.ContractTests.test_standard_output_and_optional_extensions) ... ok
+test_bounds_and_horizon_coherence (test_discrete_hazard.DiscreteHazardTests.test_bounds_and_horizon_coherence) ... ok
+test_factored_loss_matches_expansion_and_gradient (test_discrete_hazard.DiscreteHazardTests.test_factored_loss_matches_expansion_and_gradient) ... ok
+test_fit_with_synthetic_incomplete_followup (test_discrete_hazard.DiscreteHazardTests.test_fit_with_synthetic_incomplete_followup) ... ok
+test_invalid_input_explicit_status_and_forbidden_features (test_discrete_hazard.DiscreteHazardTests.test_invalid_input_explicit_status_and_forbidden_features) ... ok
+test_landmark_event_step_and_no_unit_mixing (test_discrete_hazard.DiscreteHazardTests.test_landmark_event_step_and_no_unit_mixing) ... ok
+test_nonfinite_hazard_returns_unavailable (test_discrete_hazard.DiscreteHazardTests.test_nonfinite_hazard_returns_unavailable) ... ok
+test_optimizer_failure_is_not_a_fitted_model (test_discrete_hazard.DiscreteHazardTests.test_optimizer_failure_is_not_a_fitted_model) ... ok
+test_save_load_and_reproducibility (test_discrete_hazard.DiscreteHazardTests.test_save_load_and_reproducibility) ... ok
+test_synthetic_censoring_masks_unknown_steps (test_discrete_hazard.DiscreteHazardTests.test_synthetic_censoring_masks_unknown_steps) ... ok
+Fold 1/2: fitting 2 units
+Fold 2/2: fitting 2 units
+Final fit on full training partition
+{
+  "validation": {
+    "2": {
+      "n_observations": 34,
+      "n_positive": 4,
+      "prevalence": 0.11764705882352941,
+      "mean_predicted_risk": 0.09511964595689185,
+      "calibration_in_the_large": -0.022527412866637564,
+      "brier_score": 0.020735041430318846,
+      "roc_auc": 1.0,
+      "pr_auc_average_precision": 1.0,
+      "log_loss": 0.07606121687990472,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 28,
+          "mean_predicted": 0.008094133826772333,
+          "observed_frequency": 0.0
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 2,
+          "mean_predicted": 0.2131481833947942,
+          "observed_frequency": 0.0
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 2,
+          "mean_predicted": 0.4890789883952589,
+          "observed_frequency": 1.0
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 1,
+          "mean_predicted": 0.7957205813434768,
+          "observed_frequency": 1.0
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 1,
+          "mean_predicted": 0.8072572904611148,
+          "observed_frequency": 1.0
+        }
+      ]
+    },
+    "5": {
+      "n_observations": 34,
+      "n_positive": 10,
+      "prevalence": 0.29411764705882354,
+      "mean_predicted_risk": 0.2021708030895215,
+      "calibration_in_the_large": -0.09194684396930203,
+      "brier_score": 0.06291153870463698,
+      "roc_auc": 1.0,
+      "pr_auc_average_precision": 1.0,
+      "log_loss": 0.17580541655836218,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 24,
+          "mean_predicted": 0.007197562945550111,
+          "observed_frequency": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 2,
+          "mean_predicted": 0.17030504952006492,
+          "observed_frequency": 1.0
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 2,
+          "mean_predicted": 0.42700628227476534,
+          "observed_frequency": 1.0
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 2,
+          "mean_predicted": 0.7819294042401583,
+          "observed_frequency": 1.0
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 4,
+          "mean_predicted": 0.985646080570138,
+          "observed_frequency": 1.0
+        }
+      ]
+    }
+  },
+  "coherence": {
+    "train_oof": {
+      "origins": 64,
+      "violations": 0
+    },
+    "validation": {
+      "origins": 34,
+      "violations": 0
+    }
+  }
+}
+test_pipeline_isolation_oof_and_artifacts (test_discrete_hazard_pipeline.HazardPipelineTests.test_pipeline_isolation_oof_and_artifacts) ... ok
+test_prefix_features_frozen_in_landmarks (test_discrete_hazard_pipeline.HazardPipelineTests.test_prefix_features_frozen_in_landmarks) ... ok
+test_retrospective_raw_column_rejected_before_transform (test_discrete_hazard_pipeline.HazardPipelineTests.test_retrospective_raw_column_rejected_before_transform) ... ok
+test_eda_statistics_and_candidates_ignore_validation_values (test_fd001_eda.IsolationTests.test_eda_statistics_and_candidates_ignore_validation_values) ... ok
+test_only_two_development_parquets_are_read (test_fd001_eda.IsolationTests.test_only_two_development_parquets_are_read) ... ok
+test_overlap_or_inconsistent_membership_is_rejected (test_fd001_eda.IsolationTests.test_overlap_or_inconsistent_membership_is_rejected) ... ok
+test_exact_horizon_boundaries_terminal_and_no_clipping (test_fd001_eda.TargetTests.test_exact_horizon_boundaries_terminal_and_no_clipping) ... ok
+test_invalid_horizons (test_fd001_eda.TargetTests.test_invalid_horizons) ... ok
+test_normalized_average_weights_units_equally (test_fd001_eda.TargetTests.test_normalized_average_weights_units_equally) ... ok
+test_per_unit_terminal_and_configurable_horizons (test_fd001_eda.TargetTests.test_per_unit_terminal_and_configurable_horizons) ... ok
+test_reject_censored_or_invalid_trajectory (test_fd001_eda.TargetTests.test_reject_censored_or_invalid_trajectory) ... ok
+test_missing_training_file_fails_without_creating_processed_data (test_fd001_ingestion.FD001SplitAndReportTests.test_missing_training_file_fails_without_creating_processed_data) ... ok
+test_preparation_writes_parquet_and_never_reads_official_test (test_fd001_ingestion.FD001SplitAndReportTests.test_preparation_writes_parquet_and_never_reads_official_test) ... ok
+test_report_contains_requested_summary (test_fd001_ingestion.FD001SplitAndReportTests.test_report_contains_requested_summary) ... ok
+test_split_is_reproducible_complete_and_disjoint_by_unit (test_fd001_ingestion.FD001SplitAndReportTests.test_split_is_reproducible_complete_and_disjoint_by_unit) ... ok
+test_cycle_gaps_are_rejected (test_fd001_ingestion.FD001ValidationTests.test_cycle_gaps_are_rejected) ... ok
+test_duplicate_cycle_with_different_values_is_rejected (test_fd001_ingestion.FD001ValidationTests.test_duplicate_cycle_with_different_values_is_rejected) ... ok
+test_empty_dataset_is_rejected (test_fd001_ingestion.FD001ValidationTests.test_empty_dataset_is_rejected) ... ok
+test_exact_duplicate_rows_and_unit_cycles_are_rejected (test_fd001_ingestion.FD001ValidationTests.test_exact_duplicate_rows_and_unit_cycles_are_rejected) ... ok
+test_invalid_column_count_is_rejected (test_fd001_ingestion.FD001ValidationTests.test_invalid_column_count_is_rejected) ... ok
+test_loader_assigns_clear_names_and_numeric_types (test_fd001_ingestion.FD001ValidationTests.test_loader_assigns_clear_names_and_numeric_types) ... ok
+test_loader_treats_nan_token_as_missing (test_fd001_ingestion.FD001ValidationTests.test_loader_treats_nan_token_as_missing) ... ok
+test_non_increasing_source_order_is_rejected (test_fd001_ingestion.FD001ValidationTests.test_non_increasing_source_order_is_rejected) ... ok
+test_non_integer_and_non_positive_identifiers_are_rejected (test_fd001_ingestion.FD001ValidationTests.test_non_integer_and_non_positive_identifiers_are_rejected) ... ok
+test_non_numeric_and_missing_values_are_rejected (test_fd001_ingestion.FD001ValidationTests.test_non_numeric_and_missing_values_are_rejected) ... ok
+test_orientation_finiteness_and_reproducibility (test_isolation_forest_anomaly.IsolationForestAnomalyTests.test_orientation_finiteness_and_reproducibility) ... ok
+test_prohibited_feature_names_and_anomaly_record_states (test_isolation_forest_anomaly.IsolationForestAnomalyTests.test_prohibited_feature_names_and_anomaly_record_states) ... ok
+test_save_load_and_invalid_input_status (test_isolation_forest_anomaly.IsolationForestAnomalyTests.test_save_load_and_invalid_input_status) ... ok
+test_feature_mapping_cannot_be_mutated_after_guard (test_prediction_contract.CausalityGuardTests.test_feature_mapping_cannot_be_mutated_after_guard) ... ok
+test_retrospective_fields_rejected_at_feature_boundary (test_prediction_contract.CausalityGuardTests.test_retrospective_fields_rejected_at_feature_boundary) ... ok
+test_nonnegative_decreasing_rul_terminal_zero_and_no_unit_mixing (test_prediction_contract.OperationalTargetTests.test_nonnegative_decreasing_rul_terminal_zero_and_no_unit_mixing) ... ok
+test_operational_population_excludes_terminal_and_keeps_horizons (test_prediction_contract.OperationalTargetTests.test_operational_population_excludes_terminal_and_keeps_horizons) ... ok
+test_anomaly_is_not_probability_and_disagreement_is_optional (test_prediction_contract.PredictionContractTests.test_anomaly_is_not_probability_and_disagreement_is_optional) ... ok
+test_horizon_status_validity_required_and_serialized (test_prediction_contract.PredictionContractTests.test_horizon_status_validity_required_and_serialized) ... ok
+test_invalid_input_or_metadata_cannot_be_available (test_prediction_contract.PredictionContractTests.test_invalid_input_or_metadata_cannot_be_available) ... ok
+test_probability_bounds_and_complementary_scores (test_prediction_contract.PredictionContractTests.test_probability_bounds_and_complementary_scores) ... ok
+test_unavailable_never_becomes_zero_risk (test_prediction_contract.PredictionContractTests.test_unavailable_never_becomes_zero_risk) ... ok
+test_mle_has_positive_parameters_and_supports_future_censor_indicators (test_weibull.WeibullEstimationAndMetricTests.test_mle_has_positive_parameters_and_supports_future_censor_indicators) ... ok
+test_parameter_bootstrap_resamples_unit_lifetimes_reproducibly (test_weibull.WeibullEstimationAndMetricTests.test_parameter_bootstrap_resamples_unit_lifetimes_reproducibly) ... ok
+test_probability_metrics_known_perfect_ranking (test_weibull.WeibullEstimationAndMetricTests.test_probability_metrics_known_perfect_ranking) ... ok
+test_common_fit_uses_one_lifetime_target_per_unit_and_no_features (test_weibull.WeibullFunctionTests.test_common_fit_uses_one_lifetime_target_per_unit_and_no_features) ... ok
+test_conditional_risk_bounds_zero_horizon_and_monotonic_horizon (test_weibull.WeibullFunctionTests.test_conditional_risk_bounds_zero_horizon_and_monotonic_horizon) ... ok
+test_distribution_survival_and_hazards_respect_bounds (test_weibull.WeibullFunctionTests.test_distribution_survival_and_hazards_respect_bounds) ... ok
+test_model_rejects_inputs_outside_age_only_contract (test_weibull.WeibullFunctionTests.test_model_rejects_inputs_outside_age_only_contract) ... ok
+test_predict_risk_obeys_common_contract_for_configurable_horizons (test_weibull.WeibullFunctionTests.test_predict_risk_obeys_common_contract_for_configurable_horizons) ... ok
+test_save_load_preserve_configuration_and_predictions (test_weibull.WeibullFunctionTests.test_save_load_preserve_configuration_and_predictions) ... ok
+test_pipeline_reads_age_only_train_validation_and_writes_complete_card (test_weibull_pipeline.WeibullPipelineTests.test_pipeline_reads_age_only_train_validation_and_writes_complete_card) ... ok
+
+----------------------------------------------------------------------
+Ran 77 tests in 11.497s
+
+OK

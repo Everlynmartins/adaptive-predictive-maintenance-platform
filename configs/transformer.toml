@@ -1,0 +1,32 @@
+[model]
+version = "1.0.0"
+horizons = [15, 30]
+sequence_length = 30
+d_model = 32
+num_heads = 4
+num_layers = 2
+feedforward_dim = 64
+dropout = 0.10
+activation = "gelu"
+include_age_cycle = true
+
+[training]
+batch_size = 256
+learning_rate = 0.001
+weight_decay = 0.0001
+max_epochs = 20
+patience = 4
+min_delta = 0.0001
+early_stopping_fraction = 0.20
+seed = 4701
+torch_threads = 2
+
+[evaluation]
+reliability_bins = 10
+log_loss_epsilon = 1e-15
+exploratory_threshold = 0.50
+persistence_cycles = 3
+
+[oof]
+generate = false
+reason = "Transformer is evaluated as a validation comparator and remains outside the current fusion."

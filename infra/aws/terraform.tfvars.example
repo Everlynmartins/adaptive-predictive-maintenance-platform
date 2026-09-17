@@ -1,0 +1,43 @@
+# Copy this file to terraform.tfvars only on the local workstation.
+# terraform.tfvars is ignored by Git. Do not place credentials, passwords,
+# tokens, connection strings, or secret values in it.
+
+# Required: replace with the AWS Region selected for this LAB.
+aws_region = "replace-with-your-aws-region"
+
+# Replace with two distinct standard AZs available in that Region.
+availability_zones = ["replace-with-first-zone", "replace-with-second-zone"]
+
+# Replace with your current public IPv4 /32. This TEST-NET placeholder is not access.
+operator_ipv4_cidr = "192.0.2.1/32"
+vpc_cidr           = "10.42.0.0/16"
+
+# Legacy inputs retained for existing local files; ECS now enables its exact
+# RDS secret policy automatically even if the old flag is false.
+enable_database_secret_access = true
+database_secret_arn           = null
+
+project_name = "adaptive-predictive-maintenance"
+environment  = "lab"
+managed_by   = "terraform"
+
+# Optional lifecycle tags. They are metadata only; they do not stop resources.
+owner           = ""
+expiration_date = ""
+
+additional_tags = {}
+
+# PostgreSQL 16 matches the Stage 2 engine. Review availability/pricing locally.
+# Do not overwrite an existing local tfvars file when updating this example.
+db_name              = "predictive_maintenance"
+db_username          = "pm_lab"
+db_engine_version    = "16.13"
+db_instance_class    = "db.t4g.micro"
+db_allocated_storage = 20
+# No password: RDS generates and manages it in Secrets Manager.
+
+ecs_image_tag = "stage3-lab-v1"
+ecs_cpu       = 1024
+ecs_memory    = 4096
+# desired count defaults to zero. Leave it out of tfvars if using TF_VAR below.
+# $env:TF_VAR_ecs_desired_count = "1"  # Explicitly enable paid task execution.

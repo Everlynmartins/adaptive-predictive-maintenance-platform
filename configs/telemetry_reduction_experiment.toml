@@ -1,0 +1,168 @@
+[experiment]
+version = "1.0.0"
+code_version = "0.11.0"
+random_seed = 4601
+horizons = [15, 30]
+required_models = ["xgboost", "discrete_hazard", "fusion"]
+primary_model = "fusion"
+inference_cadence = "each_cycle"
+max_matched_candidates = 2
+statement = "Pre-specified FD001 experiment; criteria are not regulatory safety objectives and do not establish a universally safe reduction."
+
+[accounting]
+metadata_overhead_bytes = 32
+value_bytes = 8
+sensor_count = 21
+setting_count = 3
+statement = "Analytical local byte proxy under fixed types and metadata overhead; not an aircraft protocol model."
+
+[receiver]
+stale_after_cycles = 3
+
+[features]
+windows = [5, 10, 20]
+relative_epsilon = 1.0e-12
+variance_epsilon = 0.0
+include_cycle = true
+receiver_history_rule = "Update sensor history only on transmitted measurements; carry derived state during hold cycles."
+
+[cross_validation]
+folds = 5
+seed = 4302
+
+[matched_models]
+model_version = "1.1.0-telemetry"
+random_seed = 4602
+
+[matched_models.random_forest]
+n_estimators = 150
+max_depth = 12
+min_samples_leaf = 4
+max_features = "sqrt"
+
+[matched_models.xgboost]
+n_estimators = 200
+max_depth = 4
+learning_rate = 0.05
+subsample = 0.8
+colsample_bytree = 0.8
+min_child_weight = 2.0
+reg_lambda = 1.0
+tree_method = "hist"
+
+[matched_models.hazard]
+max_horizon = 30
+regularization = 1.0
+max_iterations = 1500
+tolerance = 1.0e-8
+
+[matched_models.anomaly]
+model_version = "1.1.0-telemetry"
+random_seed = 4603
+n_estimators = 200
+max_samples = 256
+contamination = "auto"
+healthy_minimum_rul_exclusive = 60
+
+[matched_fusion]
+model_version = "1.1.0-telemetry"
+random_seed = 4604
+regularization_c = 1.0
+max_iterations = 1000
+include_anomaly_covariate = true
+calibration_method = "platt"
+calibration_folds = 5
+calibration_seed = 4605
+
+[alerting]
+persistence_cycles = 3
+threshold_selection_partition = "validation"
+threshold_rule = "Maximum F1 among thresholds satisfying precision >= 0.85; fall back to maximum F1."
+minimum_precision = 0.85
+
+[selection]
+rule = "Select the greatest byte reduction passing every primary-fusion H15/H30 criterion, plus at most one Pareto diagnostic candidate from another policy family for matched training."
+matched_candidate_pool = ["subset_train17", "fixed_k3", "adaptive_q95"]
+test_rule = "Evaluate Full and only matched candidates that pass all validation criteria after matched training."
+
+[acceptance]
+minimum_byte_reduction_fraction = 0.20
+maximum_pr_auc_absolute_loss = 0.03
+maximum_roc_auc_absolute_loss = 0.015
+maximum_recall_absolute_loss = 0.05
+maximum_precision_absolute_loss = 0.05
+maximum_brier_increase = 0.01
+maximum_median_lead_time_loss_cycles = 3.0
+maximum_median_alert_latency_cycles = 3.0
+maximum_p90_alert_latency_cycles = 5.0
+maximum_false_alert_episodes_per_unit_increase = 0.25
+maximum_missed_anticipated_failures = 0
+maximum_stale_fraction = 0.0
+maximum_degraded_fraction = 0.75
+maximum_unavailable_fraction = 0.0
+maximum_data_age_cycles = 3
+scope = "All limits are exploratory FD001 selection criteria fixed before this phase-specific test_internal read."
+
+[[policies]]
+id = "full"
+kind = "full"
+matched_candidate = false
+
+[[policies]]
+id = "fixed_k2"
+kind = "fixed_interval"
+interval_cycles = 2
+matched_candidate = false
+
+[[policies]]
+id = "fixed_k3"
+kind = "fixed_interval"
+interval_cycles = 3
+matched_candidate = true
+
+[[policies]]
+id = "fixed_k5"
+kind = "fixed_interval"
+interval_cycles = 5
+matched_candidate = false
+
+[[policies]]
+id = "subset_train17"
+kind = "sensor_subset"
+selection_source = "train feature manifest"
+selected_sensors = [
+  "setting_1", "setting_2", "sensor_2", "sensor_3", "sensor_4", "sensor_6",
+  "sensor_7", "sensor_8", "sensor_9", "sensor_11", "sensor_12", "sensor_13",
+  "sensor_14", "sensor_15", "sensor_17", "sensor_20", "sensor_21",
+]
+matched_candidate = true
+
+[[policies]]
+id = "adaptive_q95"
+kind = "adaptive"
+stable_interval_cycles = 4
+high_frequency_interval_cycles = 1
+high_frequency_duration_cycles = 5
+monitored_sensors = ["sensor_4", "sensor_7", "sensor_11", "sensor_12"]
+relative_change_quantile = 0.95
+threshold_source = "training partition only; re-estimated inside each OOF fitting fold"
+matched_candidate = true
+
+[[policies]]
+id = "adaptive_q99"
+kind = "adaptive"
+stable_interval_cycles = 4
+high_frequency_interval_cycles = 1
+high_frequency_duration_cycles = 5
+monitored_sensors = ["sensor_4", "sensor_7", "sensor_11", "sensor_12"]
+relative_change_quantile = 0.99
+threshold_source = "training partition only; re-estimated inside each OOF fitting fold"
+matched_candidate = false
+
+[holdout]
+partition = "test_internal"
+prior_project_exposure = true
+prior_exposure_evidence = "reports/fusion/test_evaluation_receipt.json"
+official_nasa_test_used = false
+single_phase_read = true
+no_post_test_adjustment = true

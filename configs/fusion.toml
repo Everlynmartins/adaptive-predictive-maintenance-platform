@@ -1,0 +1,25 @@
+[stacking]
+model_version = "1.0.0"
+random_seed = 4501
+regularization_c = 1.0
+max_iterations = 1000
+include_anomaly_covariate = true
+
+[cross_validation]
+folds = 5
+seed = 4502
+
+[calibration]
+methods = ["none", "platt", "isotonic"]
+folds = 5
+seed = 4503
+
+[evaluation]
+reliability_bins = 10
+log_loss_epsilon = 1.0e-15
+
+[alert_policy]
+attention_min_recall = 0.98
+alert_min_precision = 0.85
+critical_min_recall = 0.90
+persistence_cycles = 3

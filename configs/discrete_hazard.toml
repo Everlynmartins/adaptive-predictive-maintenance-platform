@@ -1,0 +1,17 @@
+[model]
+max_horizon = 30
+regularization = 1.0
+max_iterations = 1500
+tolerance = 1.0e-8
+model_version = "1.0.0"
+
+[features]
+windows = [5, 10, 20]
+
+[cross_validation]
+folds = 5
+seed = 4302
+
+[evaluation]
+horizons = [15, 30]
+age_bin_width = 50

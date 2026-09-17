@@ -1,0 +1,27 @@
+[assurance]
+project_version = "0.16.0"
+scope = "local FD001 demonstrator"
+requirements_document = "docs/safety_requirements.md"
+assumptions_document = "docs/safety_assumptions.md"
+traceability_matrix = "docs/traceability_matrix.csv"
+problem_reports = "docs/problem_reports.md"
+configuration_index = "docs/configuration_index.md"
+
+[simulation]
+unit_ids = [1, 26, 28]
+horizon = 30
+model = "fusion"
+telemetry_policy = "full"
+inference_cadence = "each_cycle"
+retrospective = true
+
+[scope_guards]
+test_internal_read = false
+official_test_read = false
+official_rul_read = false
+models_retrained = false
+thresholds_changed = false
+certification_claim = false
+
+[output]
+audit_results = "reports/final_assurance/artifacts/audit_results.json"

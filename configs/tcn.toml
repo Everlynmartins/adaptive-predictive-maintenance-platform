@@ -1,0 +1,30 @@
+[model]
+version = "1.0.0"
+horizons = [15, 30]
+sequence_length = 30
+channels = [16, 16]
+kernel_size = 3
+dropout = 0.10
+include_age_cycle = true
+
+[training]
+seed = 4701
+batch_size = 256
+max_epochs = 20
+patience = 4
+min_delta = 1.0e-4
+learning_rate = 1.0e-3
+weight_decay = 1.0e-4
+early_stopping_fraction = 0.20
+torch_threads = 2
+
+[evaluation]
+reliability_bins = 10
+log_loss_epsilon = 1.0e-15
+exploratory_threshold = 0.5
+persistence_cycles = 3
+
+[oof]
+generate = false
+reason = "TCN remains outside the current fusion in this stage; grouped OOF training is deferred because it would multiply local CPU training cost."
+

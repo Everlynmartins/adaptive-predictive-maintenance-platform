@@ -1,0 +1,39 @@
+[accounting]
+metadata_overhead_bytes = 32
+value_bytes = 8
+statement = "Local analytical estimate; not an aircraft communication protocol model."
+
+[receiver]
+stale_after_cycles = 3
+inference_cadence = "each_cycle"
+allowed_inference_cadences = ["each_cycle", "on_transmission"]
+
+[fixed_interval]
+interval_cycles = 5
+
+[sensor_subset]
+selection_source = "train"
+selection_evidence = "reports/eda_report.md"
+selected_sensors = [
+  "sensor_2", "sensor_3", "sensor_4", "sensor_7", "sensor_8", "sensor_11",
+  "sensor_12", "sensor_13", "sensor_15", "sensor_17", "sensor_20", "sensor_21",
+]
+
+[adaptive]
+stable_interval_cycles = 5
+high_frequency_interval_cycles = 1
+high_frequency_duration_cycles = 5
+monitored_sensors = ["sensor_4", "sensor_7", "sensor_11", "sensor_12"]
+absolute_change_threshold = 0.5
+relative_change_threshold = 0.02
+relative_epsilon = 1.0e-12
+moving_window = 5
+moving_deviation_threshold = 0.75
+variation_window = 5
+variation_threshold = 0.4
+anomaly_score_threshold = 0.95
+
+[scope]
+comparison_experiment_executed = false
+official_nasa_test_used = false
+test_internal_used = false

@@ -1,0 +1,196 @@
+{
+  "goodness_of_fit": {
+    "aic": 748.5721415173184,
+    "bic": 753.0691320014172,
+    "bootstrap_exceedances": 0,
+    "bootstrap_samples": 2000,
+    "critical_value": 0.1227994407264548,
+    "critical_value_method": "linear empirical quantile at 1 - significance_level",
+    "decision": "reject",
+    "ks_distance_descriptive": 0.1550916592691609,
+    "log_likelihood": -372.2860707586592,
+    "monte_carlo_standard_error_at_p": 0.0004996252342383581,
+    "observation_resolution": "continuous draws rounded to nearest positive integer cycle",
+    "p_value": 0.0004997501249375312,
+    "seed": 4202,
+    "significance_level": 0.05,
+    "statistic": 0.345777684136725,
+    "systematic_deviation": [
+      {
+        "max_absolute_deviation": 0.07628077621648743,
+        "maximum_lifetime": 180.0,
+        "mean_empirical_minus_fitted_survival": 0.052286876225038706,
+        "minimum_lifetime": 128.0,
+        "n_units": 18,
+        "region": "shortest_lifetimes"
+      },
+      {
+        "max_absolute_deviation": 0.0784607516179961,
+        "maximum_lifetime": 201.0,
+        "mean_empirical_minus_fitted_survival": -0.01114186935358503,
+        "minimum_lifetime": 181.0,
+        "n_units": 18,
+        "region": "lower_middle"
+      },
+      {
+        "max_absolute_deviation": 0.1550916592691609,
+        "maximum_lifetime": 231.0,
+        "mean_empirical_minus_fitted_survival": -0.11226659049591257,
+        "minimum_lifetime": 202.0,
+        "n_units": 17,
+        "region": "upper_middle"
+      },
+      {
+        "max_absolute_deviation": 0.12557222969759063,
+        "maximum_lifetime": 362.0,
+        "mean_empirical_minus_fitted_survival": -0.035971122192572993,
+        "minimum_lifetime": 231.0,
+        "n_units": 17,
+        "region": "longest_lifetimes"
+      }
+    ],
+    "test": "Cramer-von Mises parametric-bootstrap with parameter refit"
+  },
+  "parameters": {
+    "beta": 4.4284658362585585,
+    "confidence_intervals": {
+      "attempts": 2000,
+      "beta": {
+        "lower": 3.8601072444636264,
+        "upper": 5.670466456203032
+      },
+      "confidence_level": 0.95,
+      "eta": {
+        "lower": 215.2523702269697,
+        "upper": 241.1779702589266
+      },
+      "method": "nonparametric percentile bootstrap by unit",
+      "samples": 2000,
+      "seed": 4201,
+      "successful_fits": 2000
+    },
+    "eta": 227.9879737769514,
+    "location": 0.0
+  },
+  "probability_plot_r_squared_descriptive": 0.8731614882096704,
+  "sensitivity": [
+    {
+      "age": 50,
+      "horizon": 15,
+      "risk_beta_lower": 0.005002071241162663,
+      "risk_beta_upper": 0.0006284527217860311,
+      "risk_eta_lower": 0.003414459504560984,
+      "risk_eta_upper": 0.0020648814554263682,
+      "risk_mle": 0.002648113480533493,
+      "risk_parameter_rectangle_max": 0.006240843815191118,
+      "risk_parameter_rectangle_min": 0.0004568827790045268
+    },
+    {
+      "age": 50,
+      "horizon": 30,
+      "risk_beta_lower": 0.014584764444360833,
+      "risk_beta_upper": 0.002449567793011074,
+      "risk_eta_lower": 0.010867937850848487,
+      "risk_eta_upper": 0.006582093639551732,
+      "risk_mle": 0.008435820950458922,
+      "risk_parameter_rectangle_max": 0.01817492918469736,
+      "risk_parameter_rectangle_min": 0.0017812699569876638
+    },
+    {
+      "age": 100,
+      "horizon": 15,
+      "risk_beta_lower": 0.029267112267187555,
+      "risk_beta_upper": 0.011231270100683659,
+      "risk_eta_lower": 0.028331964480970754,
+      "risk_eta_upper": 0.01721931921342419,
+      "risk_mle": 0.02203540953487636,
+      "risk_parameter_rectangle_max": 0.03640408327527052,
+      "risk_parameter_rectangle_min": 0.00817697029508607
+    },
+    {
+      "age": 100,
+      "horizon": 30,
+      "risk_beta_lower": 0.07023115981668084,
+      "risk_beta_upper": 0.0315105228986341,
+      "risk_eta_lower": 0.07100207421774218,
+      "risk_eta_upper": 0.04353272466583649,
+      "risk_mle": 0.05549755424552201,
+      "risk_parameter_rectangle_max": 0.08689981610895699,
+      "risk_parameter_rectangle_min": 0.02300595532103766
+    },
+    {
+      "age": 150,
+      "horizon": 15,
+      "risk_beta_lower": 0.08456358290126866,
+      "risk_beta_upper": 0.06456081918648161,
+      "risk_eta_lower": 0.10064655917783648,
+      "risk_eta_upper": 0.062095929378245436,
+      "risk_mle": 0.07894821616811741,
+      "risk_parameter_rectangle_max": 0.10443826399248078,
+      "risk_parameter_rectangle_min": 0.047356900011118724
+    },
+    {
+      "age": 150,
+      "horizon": 30,
+      "risk_beta_lower": 0.18366234457795555,
+      "risk_beta_upper": 0.1552386558640072,
+      "risk_eta_lower": 0.22190659002751495,
+      "risk_eta_upper": 0.14069683834739857,
+      "risk_mle": 0.1767700099171466,
+      "risk_parameter_rectangle_max": 0.22379617888117745,
+      "risk_parameter_rectangle_min": 0.11541313425218583
+    },
+    {
+      "age": 200,
+      "horizon": 15,
+      "risk_beta_lower": 0.17653313828679287,
+      "risk_beta_upper": 0.21433560998189766,
+      "risk_eta_lower": 0.23862301974376013,
+      "risk_eta_upper": 0.15190148473976134,
+      "risk_mle": 0.1905147721574841,
+      "risk_parameter_rectangle_max": 0.2840753039804454,
+      "risk_parameter_rectangle_min": 0.14472081301734954
+    },
+    {
+      "age": 200,
+      "horizon": 30,
+      "risk_beta_lower": 0.35036353207525456,
+      "risk_beta_upper": 0.43743807517559724,
+      "risk_eta_lower": 0.4614507212033471,
+      "risk_eta_upper": 0.3120299973917962,
+      "risk_mle": 0.38108694861694714,
+      "risk_parameter_rectangle_max": 0.5492870143675698,
+      "risk_parameter_rectangle_min": 0.2933114873649474
+    },
+    {
+      "age": 250,
+      "horizon": 15,
+      "risk_beta_lower": 0.3023254995634585,
+      "risk_beta_upper": 0.4833146685635253,
+      "risk_eta_lower": 0.43511894174543325,
+      "risk_eta_upper": 0.29189386003790724,
+      "risk_mle": 0.3577531123293438,
+      "risk_parameter_rectangle_max": 0.5993919650043598,
+      "risk_parameter_rectangle_min": 0.251547546975824
+    },
+    {
+      "age": 250,
+      "horizon": 30,
+      "risk_beta_lower": 0.5430833423824559,
+      "risk_beta_upper": 0.7813530367415628,
+      "risk_eta_lower": 0.7176342999560179,
+      "risk_eta_upper": 0.5343011686332209,
+      "risk_mle": 0.6248231302658485,
+      "risk_parameter_rectangle_max": 0.8782923688803047,
+      "risk_parameter_rectangle_min": 0.4676217792700258
+    }
+  ],
+  "training_lifetimes": {
+    "censored": 0,
+    "events": 70,
+    "maximum": 362,
+    "median": 200.5,
+    "minimum": 128,
+    "unit_count": 70
+  }
+}

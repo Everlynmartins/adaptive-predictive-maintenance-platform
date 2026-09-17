@@ -1,0 +1,19 @@
+{
+  "persistence_cycles": 3,
+  "selected_before_filtered_comparison": true,
+  "source_partition": "validation",
+  "thresholds": {
+    "discrete_hazard": {
+      "15": 0.21686605242646084,
+      "30": 0.18136845701441084
+    },
+    "fusion": {
+      "15": 0.20137471216222377,
+      "30": 0.15811159606353034
+    },
+    "xgboost": {
+      "15": 0.47195300459861755,
+      "30": 0.3317582607269287
+    }
+  }
+}

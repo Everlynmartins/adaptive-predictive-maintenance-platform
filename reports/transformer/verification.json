@@ -1,0 +1,19 @@
+{
+  "python": "3.11.16",
+  "torch": "2.14.0+cpu",
+  "source_mode": "processed_parquet",
+  "train_units": 70,
+  "validation_units": 15,
+  "selected_epoch": 7,
+  "parameter_count": 17762,
+  "tests": {
+    "transformer_and_assurance": {"passed": 12, "subtests_passed": 97, "seconds": 4.27},
+    "full_suite": {"passed": 142, "subtests_passed": 212, "seconds": 27.08, "warnings": 0},
+    "traceability": {"passed": 1, "subtests_passed": 89, "seconds": 0.04}
+  },
+  "pip_check": "No broken requirements found.",
+  "test_internal_read": false,
+  "official_test_read": false,
+  "official_rul_read": false,
+  "included_in_current_fusion": false
+}

@@ -1,0 +1,7 @@
+# Preserve validated bytes and hashes across Windows/Linux checkouts.
+# -text disables newline conversion; it does not disable text diffs.
+src/** -text
+configs/** -text
+data/** -text
+reports/** -text
+infra/aws/** -text

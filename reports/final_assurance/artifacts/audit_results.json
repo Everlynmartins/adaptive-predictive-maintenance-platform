@@ -1,0 +1,222 @@
+{
+  "audit_name": "FD001 local phase final assurance audit",
+  "project_version": "0.16.0",
+  "scope": "local FD001 demonstrator",
+  "claim_boundary": "benchmark-only engineering evidence; no certification or operational safety claim",
+  "code_identity": "unavailable: repository has no commit",
+  "environment": {
+    "python": "3.11.16",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.6.0",
+    "torch": "2.14.0",
+    "shap": "0.51.0",
+    "streamlit": "1.64.0"
+  },
+  "checks": {
+    "requirements_have_required_fields": true,
+    "requirements_unique": true,
+    "matrix_order_matches_requirements": true,
+    "verified_rows_have_implementation_evidence_and_tests": true,
+    "all_referenced_tests_exist": true,
+    "assumptions_have_impact_and_allowed_status": true,
+    "unit_partitions_are_disjoint": true,
+    "feature_manifest_has_no_forbidden_features": true,
+    "fusion_meta_folds_have_no_unit_overlap": true,
+    "fusion_uses_train_oof": true,
+    "official_test_not_used_by_fusion": true,
+    "model_cards_are_versioned": true,
+    "multi_unit_simulation_reaches_event_boundary": true,
+    "no_source_cache_artifacts": true
+  },
+  "findings": {
+    "missing_requirement_fields": [],
+    "missing_test_references": [],
+    "invalid_assumptions": [],
+    "split_overlap": {
+      "train:validation": [],
+      "train:test_internal": [],
+      "validation:test_internal": []
+    },
+    "forbidden_features": [],
+    "oof_overlap_count": 0,
+    "source_cache_directories": []
+  },
+  "requirement_status": {
+    "verified": 77,
+    "partial": 17,
+    "planned": 1
+  },
+  "assumption_status": {
+    "open": 37,
+    "confirmed": 14,
+    "invalidated": 1
+  },
+  "configuration_sha256": {
+    "configs/fd001.toml": "a1a832f3c70c2690d9cd86855fa15911051319c7430d1360329661fa70cb9e7c",
+    "configs/fd001_eda.toml": "ae31b531320856c29e422e3bbc1e26a3ac6378b6a5bc1552794f2f97428600c3",
+    "configs/weibull.toml": "9c84a8377c00cdb368f966cd0adc3991e57dd76e1c5d74b88d4317fcf0de478c",
+    "configs/classical_ml.toml": "138e29748308b9817c7a6768744da828880a72502175d8e202f17f67d375a122",
+    "configs/discrete_hazard.toml": "b64e336b3f5fa3304ea61ab73a584fc5fbcc645effd96b06fce95faada7a39a6",
+    "configs/anomaly_detection.toml": "7ca2a969bd46cb07a2d74bfd056d640dc7aa95b08c1ca121afd63b104cdb3a86",
+    "configs/fusion.toml": "ef938428eaa8459a6f3ddec594751025548bcf1f60bea77272b5457576c18ba3",
+    "configs/fusion_alert_policy.toml": "3eb00fe69a1c4a73413bec640a5158d6d1a935918617875cd7cbd37b821833dd",
+    "configs/telemetry_filtering.toml": "9b9b4ae41d024ccc877aabf37a24a97c35c576110d4c5118826d763e6918fb78",
+    "configs/telemetry_reduction_experiment.toml": "85870e4886db5e5633f751fb9396dac6271fa90dc32b3128791b4b0ce161f864",
+    "configs/tcn.toml": "ab1f9cf0e5bc875e59f563f18418a385ce6323aa55c6d47b98f999878651aabc",
+    "configs/transformer.toml": "d82661762202b285f6a537418aa2e2a426513c2ca987cadc4085948a0c69ab37",
+    "configs/explainability_uncertainty.toml": "c13e879510afbe5137e0a99df11bfcb706df1ce4efc810e0dae7b7d0a86550ea",
+    "configs/local_app.toml": "2a6cca5c669a4156c319ea37724af9e78aebdf8e2b57382bfd8b350fae7b467f",
+    "configs/final_assurance.toml": "b889be720ad8d0db5a0bf938bceb2115423b3d54b9cc35642d01505772523c1d"
+  },
+  "model_cards": {
+    "weibull": {
+      "path": "reports/weibull/model_card.json",
+      "model_name": "weibull_2p_population_age_fd001",
+      "model_version": "1.0.0",
+      "sha256": "c1aa7732d16354d19d9d207f9041544f7fe648427491040299f12576bfbc2954"
+    },
+    "random_forest": {
+      "path": "reports/classical_ml/random_forest_model_card.json",
+      "model_name": "random_forest_fd001",
+      "model_version": "1.0.0",
+      "sha256": "44717eca46d0b9fe78f72e0c7de3115e8458e35821aa38fe8f07476845f65289"
+    },
+    "xgboost": {
+      "path": "reports/classical_ml/xgboost_model_card.json",
+      "model_name": "xgboost_fd001",
+      "model_version": "1.0.0",
+      "sha256": "dae321595e59d5ead18d593533b643023016f673278ab9d4a437ba808049f6a5"
+    },
+    "discrete_hazard": {
+      "path": "reports/discrete_hazard/model_card.json",
+      "model_name": "discrete_hazard_logistic",
+      "model_version": "1.0.0",
+      "sha256": "0d1644066a94ae4bf0b61850cf7c9d196631b80b9fa55b30889a65c8b6eb3dd6"
+    },
+    "isolation_forest": {
+      "path": "reports/anomaly_detection/model_card.json",
+      "model_name": "isolation_forest_anomaly",
+      "model_version": "1.0.0",
+      "sha256": "6524456103d38a4be092ea7a963502e1ae5527d22684a738812ed101b75b58ee"
+    },
+    "fusion": {
+      "path": "reports/fusion/model_card.json",
+      "model_name": "fd001_logistic_probability_stacking",
+      "model_version": "1.0.0",
+      "sha256": "4dec96ebc819a6f4d77ca3860586dd4bc5294f184b12c1fdab904d4269439bff"
+    },
+    "tcn": {
+      "path": "reports/tcn/model_card.json",
+      "model_name": "tcn_fd001",
+      "model_version": "1.0.0",
+      "sha256": "528e3bcaa1e787f940e65d0ff99b20bc4a25e85bc038da98262865b928c6260b"
+    },
+    "transformer": {
+      "path": "reports/transformer/model_card.json",
+      "model_name": "transformer_fd001",
+      "model_version": "1.0.0",
+      "sha256": "fb761e73a8d2cabc4f8be5b74aebec423d06056a1b74b371e9bd982040420768"
+    }
+  },
+  "model_artifacts": {
+    "weibull": {
+      "path": "reports/weibull/artifacts/weibull_2p_model.json",
+      "sha256": "74038686691dfa2cd2388db047c73d47b03f114c577c8eed8e59a511fe5819a3"
+    },
+    "random_forest_h15": {
+      "path": "reports/classical_ml/artifacts/models/random_forest_h15.joblib",
+      "sha256": "161de43fc8cc2e331c8c801c972796cb479452f4170160048238ff4d27652bd9"
+    },
+    "random_forest_h30": {
+      "path": "reports/classical_ml/artifacts/models/random_forest_h30.joblib",
+      "sha256": "2da602265550128aed08bc1a471fdd656c80c90e9288ea9ff57b9739b7966bc5"
+    },
+    "xgboost_h15": {
+      "path": "reports/classical_ml/artifacts/models/xgboost_h15.joblib",
+      "sha256": "7ebe07da8efd7fcb8d290d54218442cef78425574ff71a7ba17f8f597fa2ffb8"
+    },
+    "xgboost_h30": {
+      "path": "reports/classical_ml/artifacts/models/xgboost_h30.joblib",
+      "sha256": "6bb0d1d918cb579f66f81ce60092e8b15b287245b853b6ec6a7530990e19a133"
+    },
+    "discrete_hazard": {
+      "path": "reports/discrete_hazard/artifacts/model.joblib",
+      "sha256": "3cc4ee830539f4cfb995f58e68be0663d07f777cd2475f189692d5971e547d70"
+    },
+    "isolation_forest": {
+      "path": "reports/anomaly_detection/artifacts/isolation_forest.joblib",
+      "sha256": "7fe4709fefedfab5170204d1846d4e7cc0be1ecb08ab40644335cfedaf81e323"
+    },
+    "fusion_h15": {
+      "path": "reports/fusion/artifacts/stacking_h15.joblib",
+      "sha256": "6424c9d753800cc64e22dd4e247a6d3016d41f4cc222e713db389d223052c49a"
+    },
+    "fusion_h30": {
+      "path": "reports/fusion/artifacts/stacking_h30.joblib",
+      "sha256": "80d0da5d3262858f1ffff0284681f647da48f8b514de4fce39d60adc0481246e"
+    },
+    "tcn": {
+      "path": "reports/tcn/artifacts/tcn_model.pt",
+      "sha256": "e5e5cead08875d7a4db52b3a682b3104ece542318859607f981db1f024281f63"
+    },
+    "transformer": {
+      "path": "reports/transformer/artifacts/transformer_model.pt",
+      "sha256": "a0d786151606f72aceb8cac3f6556b81ab742b758a8b232800cb0f270cbfc09b"
+    }
+  },
+  "multi_unit_simulation": [
+    {
+      "unit_id": 1,
+      "first_cycle": 1,
+      "last_prediction_cycle": 191,
+      "terminal_cycle_evaluation": 192,
+      "prediction_origins": 191,
+      "last_rul_evaluation": 1,
+      "valid": 191,
+      "degraded": 0,
+      "unavailable": 0,
+      "risk_bounds_ok": true,
+      "event_boundary_ok": true
+    },
+    {
+      "unit_id": 26,
+      "first_cycle": 1,
+      "last_prediction_cycle": 198,
+      "terminal_cycle_evaluation": 199,
+      "prediction_origins": 198,
+      "last_rul_evaluation": 1,
+      "valid": 198,
+      "degraded": 0,
+      "unavailable": 0,
+      "risk_bounds_ok": true,
+      "event_boundary_ok": true
+    },
+    {
+      "unit_id": 28,
+      "first_cycle": 1,
+      "last_prediction_cycle": 164,
+      "terminal_cycle_evaluation": 165,
+      "prediction_origins": 164,
+      "last_rul_evaluation": 1,
+      "valid": 164,
+      "degraded": 0,
+      "unavailable": 0,
+      "risk_bounds_ok": true,
+      "event_boundary_ok": true
+    }
+  ],
+  "scope_guards": {
+    "test_internal_read": false,
+    "official_test_read": false,
+    "official_rul_read": false,
+    "models_retrained": false,
+    "thresholds_changed": false,
+    "certification_claim": false
+  }
+}

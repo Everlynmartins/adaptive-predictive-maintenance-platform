@@ -1,0 +1,1126 @@
+{
+  "train_oof": {
+    "15": {
+      "n_observations": 14564,
+      "n_positive": 1050,
+      "prevalence": 0.0720955781378742,
+      "mean_predicted_risk": 0.06780504808807443,
+      "calibration_in_the_large": -0.004290530049799776,
+      "brier_score": 0.013835464079685621,
+      "roc_auc": 0.9961060487536735,
+      "pr_auc_average_precision": 0.9529616252785805,
+      "log_loss": 0.04697125538362003,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 13280,
+          "mean_predicted": 0.0016156344118464006,
+          "observed_frequency": 0.00391566265060241
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 140,
+          "mean_predicted": 0.14269385389406714,
+          "observed_frequency": 0.2857142857142857
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 96,
+          "mean_predicted": 0.2520731306430403,
+          "observed_frequency": 0.4479166666666667
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 56,
+          "mean_predicted": 0.3434660828871659,
+          "observed_frequency": 0.48214285714285715
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 48,
+          "mean_predicted": 0.45464315188097143,
+          "observed_frequency": 0.5416666666666666
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 42,
+          "mean_predicted": 0.5519164726946929,
+          "observed_frequency": 0.6666666666666666
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 42,
+          "mean_predicted": 0.6454491280006903,
+          "observed_frequency": 0.7380952380952381
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 52,
+          "mean_predicted": 0.7566000289769528,
+          "observed_frequency": 0.75
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 68,
+          "mean_predicted": 0.8516480643173231,
+          "observed_frequency": 0.7941176470588235
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 740,
+          "mean_predicted": 0.9909180246445147,
+          "observed_frequency": 0.9594594594594594
+        }
+      ]
+    },
+    "30": {
+      "n_observations": 14564,
+      "n_positive": 2100,
+      "prevalence": 0.1441911562757484,
+      "mean_predicted_risk": 0.15471637913403172,
+      "calibration_in_the_large": 0.010525222858283306,
+      "brier_score": 0.026113630102796735,
+      "roc_auc": 0.9920139143590684,
+      "pr_auc_average_precision": 0.9601462534545455,
+      "log_loss": 0.11830519881028709,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 11809,
+          "mean_predicted": 0.0036065419477388293,
+          "observed_frequency": 0.0062664069777288505
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 260,
+          "mean_predicted": 0.1425568674537174,
+          "observed_frequency": 0.18846153846153846
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 165,
+          "mean_predicted": 0.24516351193496488,
+          "observed_frequency": 0.18787878787878787
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 82,
+          "mean_predicted": 0.3471051794863229,
+          "observed_frequency": 0.2804878048780488
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 86,
+          "mean_predicted": 0.4469966544755238,
+          "observed_frequency": 0.38372093023255816
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 74,
+          "mean_predicted": 0.5497097643473111,
+          "observed_frequency": 0.3918918918918919
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 63,
+          "mean_predicted": 0.6493679342995411,
+          "observed_frequency": 0.5396825396825397
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 73,
+          "mean_predicted": 0.7579359041226609,
+          "observed_frequency": 0.5342465753424658
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 90,
+          "mean_predicted": 0.8530771433876888,
+          "observed_frequency": 0.5333333333333333
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 1862,
+          "mean_predicted": 0.9949428697684009,
+          "observed_frequency": 0.9344790547798066
+        }
+      ]
+    }
+  },
+  "validation": {
+    "15": {
+      "n_observations": 3045,
+      "n_positive": 225,
+      "prevalence": 0.07389162561576355,
+      "mean_predicted_risk": 0.06847113373115134,
+      "calibration_in_the_large": -0.005420491884612216,
+      "brier_score": 0.01506320288624666,
+      "roc_auc": 0.9963309692671395,
+      "pr_auc_average_precision": 0.9530022635020307,
+      "log_loss": 0.047817652935151715,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2774,
+          "mean_predicted": 0.0012358648427260193,
+          "observed_frequency": 0.0021629416005767843
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 24,
+          "mean_predicted": 0.14189203777310064,
+          "observed_frequency": 0.4166666666666667
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 22,
+          "mean_predicted": 0.2440897495973917,
+          "observed_frequency": 0.6363636363636364
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 16,
+          "mean_predicted": 0.3465057338680787,
+          "observed_frequency": 0.6875
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 9,
+          "mean_predicted": 0.4606494945296888,
+          "observed_frequency": 0.6666666666666666
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 11,
+          "mean_predicted": 0.5508863359458945,
+          "observed_frequency": 0.45454545454545453
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 9,
+          "mean_predicted": 0.6615858331534318,
+          "observed_frequency": 0.7777777777777778
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 6,
+          "mean_predicted": 0.762918954556973,
+          "observed_frequency": 0.6666666666666666
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 16,
+          "mean_predicted": 0.84751442750535,
+          "observed_frequency": 0.75
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 158,
+          "mean_predicted": 0.9901849733295394,
+          "observed_frequency": 0.9493670886075949
+        }
+      ]
+    },
+    "30": {
+      "n_observations": 3045,
+      "n_positive": 450,
+      "prevalence": 0.1477832512315271,
+      "mean_predicted_risk": 0.14174357170729557,
+      "calibration_in_the_large": -0.006039679524231539,
+      "brier_score": 0.02717181255937458,
+      "roc_auc": 0.9910019267822736,
+      "pr_auc_average_precision": 0.9565591796603106,
+      "log_loss": 0.11134422294102395,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2526,
+          "mean_predicted": 0.002582985875926119,
+          "observed_frequency": 0.00870942201108472
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 35,
+          "mean_predicted": 0.14025216002407473,
+          "observed_frequency": 0.2857142857142857
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 27,
+          "mean_predicted": 0.2500183614132751,
+          "observed_frequency": 0.5185185185185185
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 17,
+          "mean_predicted": 0.34114584285714755,
+          "observed_frequency": 0.9411764705882353
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 16,
+          "mean_predicted": 0.4446149831764599,
+          "observed_frequency": 0.375
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 19,
+          "mean_predicted": 0.5397150433657899,
+          "observed_frequency": 0.6842105263157895
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 13,
+          "mean_predicted": 0.6528200680390003,
+          "observed_frequency": 0.6153846153846154
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 23,
+          "mean_predicted": 0.7527621599581124,
+          "observed_frequency": 0.7391304347826086
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 16,
+          "mean_predicted": 0.8481627106706036,
+          "observed_frequency": 0.625
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 353,
+          "mean_predicted": 0.994012842349877,
+          "observed_frequency": 0.9461756373937678
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "model": "discrete_hazard",
+      "horizon": 15,
+      "n_observations": 3045,
+      "n_positive": 225,
+      "prevalence": 0.07389162561576355,
+      "mean_predicted_risk": 0.06847113373115134,
+      "calibration_in_the_large": -0.005420491884612216,
+      "brier_score": 0.01506320288624666,
+      "roc_auc": 0.9963309692671395,
+      "pr_auc_average_precision": 0.9530022635020307,
+      "log_loss": 0.047817652935151715,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2774,
+          "mean_predicted": 0.0012358648427260193,
+          "observed_frequency": 0.0021629416005767843
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 24,
+          "mean_predicted": 0.14189203777310064,
+          "observed_frequency": 0.4166666666666667
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 22,
+          "mean_predicted": 0.2440897495973917,
+          "observed_frequency": 0.6363636363636364
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 16,
+          "mean_predicted": 0.3465057338680787,
+          "observed_frequency": 0.6875
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 9,
+          "mean_predicted": 0.4606494945296888,
+          "observed_frequency": 0.6666666666666666
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 11,
+          "mean_predicted": 0.5508863359458945,
+          "observed_frequency": 0.45454545454545453
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 9,
+          "mean_predicted": 0.6615858331534318,
+          "observed_frequency": 0.7777777777777778
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 6,
+          "mean_predicted": 0.762918954556973,
+          "observed_frequency": 0.6666666666666666
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 16,
+          "mean_predicted": 0.84751442750535,
+          "observed_frequency": 0.75
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 158,
+          "mean_predicted": 0.9901849733295394,
+          "observed_frequency": 0.9493670886075949
+        }
+      ]
+    },
+    {
+      "model": "discrete_hazard",
+      "horizon": 30,
+      "n_observations": 3045,
+      "n_positive": 450,
+      "prevalence": 0.1477832512315271,
+      "mean_predicted_risk": 0.14174357170729557,
+      "calibration_in_the_large": -0.006039679524231539,
+      "brier_score": 0.02717181255937458,
+      "roc_auc": 0.9910019267822736,
+      "pr_auc_average_precision": 0.9565591796603106,
+      "log_loss": 0.11134422294102395,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2526,
+          "mean_predicted": 0.002582985875926119,
+          "observed_frequency": 0.00870942201108472
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 35,
+          "mean_predicted": 0.14025216002407473,
+          "observed_frequency": 0.2857142857142857
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 27,
+          "mean_predicted": 0.2500183614132751,
+          "observed_frequency": 0.5185185185185185
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 17,
+          "mean_predicted": 0.34114584285714755,
+          "observed_frequency": 0.9411764705882353
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 16,
+          "mean_predicted": 0.4446149831764599,
+          "observed_frequency": 0.375
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 19,
+          "mean_predicted": 0.5397150433657899,
+          "observed_frequency": 0.6842105263157895
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 13,
+          "mean_predicted": 0.6528200680390003,
+          "observed_frequency": 0.6153846153846154
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 23,
+          "mean_predicted": 0.7527621599581124,
+          "observed_frequency": 0.7391304347826086
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 16,
+          "mean_predicted": 0.8481627106706036,
+          "observed_frequency": 0.625
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 353,
+          "mean_predicted": 0.994012842349877,
+          "observed_frequency": 0.9461756373937678
+        }
+      ]
+    },
+    {
+      "model": "random_forest",
+      "horizon": 15,
+      "n_observations": 3045,
+      "n_positive": 225,
+      "prevalence": 0.07389162561576355,
+      "mean_predicted_risk": 0.07451430569144199,
+      "calibration_in_the_large": 0.0006226800756784362,
+      "brier_score": 0.013749951993751274,
+      "roc_auc": 0.9959921197793539,
+      "pr_auc_average_precision": 0.9554786400651449,
+      "log_loss": 0.04347286620413676,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2691,
+          "mean_predicted": 0.0016350176520016078,
+          "observed_frequency": 0.0
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 56,
+          "mean_predicted": 0.14061248165985382,
+          "observed_frequency": 0.08928571428571429
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 27,
+          "mean_predicted": 0.24307341833357332,
+          "observed_frequency": 0.4074074074074074
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 27,
+          "mean_predicted": 0.354134089995383,
+          "observed_frequency": 0.4074074074074074
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 21,
+          "mean_predicted": 0.4509256839079785,
+          "observed_frequency": 0.23809523809523808
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 21,
+          "mean_predicted": 0.548972459974569,
+          "observed_frequency": 0.5238095238095238
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 26,
+          "mean_predicted": 0.6424739094074788,
+          "observed_frequency": 0.5769230769230769
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 23,
+          "mean_predicted": 0.7539061724438,
+          "observed_frequency": 0.6956521739130435
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 38,
+          "mean_predicted": 0.8623855984875403,
+          "observed_frequency": 0.9473684210526315
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 115,
+          "mean_predicted": 0.9624752109235565,
+          "observed_frequency": 1.0
+        }
+      ]
+    },
+    {
+      "model": "random_forest",
+      "horizon": 30,
+      "n_observations": 3045,
+      "n_positive": 450,
+      "prevalence": 0.1477832512315271,
+      "mean_predicted_risk": 0.13979185037752132,
+      "calibration_in_the_large": -0.007991400854005792,
+      "brier_score": 0.026506380703299325,
+      "roc_auc": 0.9896270605865981,
+      "pr_auc_average_precision": 0.9545066141622529,
+      "log_loss": 0.09848922777000217,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2409,
+          "mean_predicted": 0.00426676343941602,
+          "observed_frequency": 0.0049813200498132005
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 77,
+          "mean_predicted": 0.1437228309849291,
+          "observed_frequency": 0.12987012987012986
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 64,
+          "mean_predicted": 0.2457162924777714,
+          "observed_frequency": 0.296875
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 38,
+          "mean_predicted": 0.347320822669911,
+          "observed_frequency": 0.2894736842105263
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 47,
+          "mean_predicted": 0.4470611517543007,
+          "observed_frequency": 0.40425531914893614
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 42,
+          "mean_predicted": 0.5521940699414379,
+          "observed_frequency": 0.7619047619047619
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 40,
+          "mean_predicted": 0.6575832257484612,
+          "observed_frequency": 0.75
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 35,
+          "mean_predicted": 0.7542499023939084,
+          "observed_frequency": 0.8571428571428571
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 61,
+          "mean_predicted": 0.86526414189881,
+          "observed_frequency": 0.9344262295081968
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 232,
+          "mean_predicted": 0.972886405036985,
+          "observed_frequency": 0.9913793103448276
+        }
+      ]
+    },
+    {
+      "model": "weibull",
+      "horizon": 15,
+      "n_observations": 3045,
+      "n_positive": 225,
+      "prevalence": 0.07389162561576355,
+      "mean_predicted_risk": 0.06859704617138589,
+      "calibration_in_the_large": -0.005294579444377667,
+      "brier_score": 0.06065215370821325,
+      "roc_auc": 0.8763940110323089,
+      "pr_auc_average_precision": 0.30987843070671156,
+      "log_loss": 0.19743528785078815,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2377,
+          "mean_predicted": 0.023102571088046538,
+          "observed_frequency": 0.030290281867900715
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 380,
+          "mean_predicted": 0.14192649179365283,
+          "observed_frequency": 0.1868421052631579
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 142,
+          "mean_predicted": 0.2429151589792592,
+          "observed_frequency": 0.2605633802816901
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 71,
+          "mean_predicted": 0.34454527315037325,
+          "observed_frequency": 0.4225352112676056
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 25,
+          "mean_predicted": 0.4478127473208384,
+          "observed_frequency": 0.0
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 25,
+          "mean_predicted": 0.548469010931522,
+          "observed_frequency": 0.0
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 25,
+          "mean_predicted": 0.6466966523581995,
+          "observed_frequency": 0.6
+        }
+      ]
+    },
+    {
+      "model": "weibull",
+      "horizon": 30,
+      "n_observations": 3045,
+      "n_positive": 450,
+      "prevalence": 0.1477832512315271,
+      "mean_predicted_risk": 0.13555084507744666,
+      "calibration_in_the_large": -0.012232406154080444,
+      "brier_score": 0.09819663683554046,
+      "roc_auc": 0.8824046242774567,
+      "pr_auc_average_precision": 0.48417730447079343,
+      "log_loss": 0.2935762083701919,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 1830,
+          "mean_predicted": 0.026204057152062907,
+          "observed_frequency": 0.003278688524590164
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 492,
+          "mean_predicted": 0.14422958347755507,
+          "observed_frequency": 0.2764227642276423
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 268,
+          "mean_predicted": 0.2475410317290244,
+          "observed_frequency": 0.3246268656716418
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 167,
+          "mean_predicted": 0.3437336251548805,
+          "observed_frequency": 0.49101796407185627
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 106,
+          "mean_predicted": 0.443787882629234,
+          "observed_frequency": 0.4056603773584906
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 66,
+          "mean_predicted": 0.546445325832508,
+          "observed_frequency": 0.6212121212121212
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 47,
+          "mean_predicted": 0.6385837002950127,
+          "observed_frequency": 0.5319148936170213
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 25,
+          "mean_predicted": 0.7521888910769023,
+          "observed_frequency": 0.0
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 34,
+          "mean_predicted": 0.8544253010052925,
+          "observed_frequency": 0.5882352941176471
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 10,
+          "mean_predicted": 0.9117908208736853,
+          "observed_frequency": 1.0
+        }
+      ]
+    },
+    {
+      "model": "xgboost",
+      "horizon": 15,
+      "n_observations": 3045,
+      "n_positive": 225,
+      "prevalence": 0.07389162561576355,
+      "mean_predicted_risk": 0.0727506647098976,
+      "calibration_in_the_large": -0.0011409609058659481,
+      "brier_score": 0.01051032319401009,
+      "roc_auc": 0.9977620173364854,
+      "pr_auc_average_precision": 0.9752072279584559,
+      "log_loss": 0.03422059505130537,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2784,
+          "mean_predicted": 0.0010628176449221554,
+          "observed_frequency": 0.004310344827586207
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 14,
+          "mean_predicted": 0.14549909744943892,
+          "observed_frequency": 0.21428571428571427
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 9,
+          "mean_predicted": 0.2353238347503874,
+          "observed_frequency": 0.2222222222222222
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 8,
+          "mean_predicted": 0.3568667955696583,
+          "observed_frequency": 0.125
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 3,
+          "mean_predicted": 0.45134370525677997,
+          "observed_frequency": 0.6666666666666666
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 12,
+          "mean_predicted": 0.5564002394676208,
+          "observed_frequency": 0.5833333333333334
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 9,
+          "mean_predicted": 0.631207287311554,
+          "observed_frequency": 0.5555555555555556
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 13,
+          "mean_predicted": 0.74133811547206,
+          "observed_frequency": 0.5384615384615384
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 20,
+          "mean_predicted": 0.8582883387804031,
+          "observed_frequency": 0.7
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 173,
+          "mean_predicted": 0.9886831885817423,
+          "observed_frequency": 0.9942196531791907
+        }
+      ]
+    },
+    {
+      "model": "xgboost",
+      "horizon": 30,
+      "n_observations": 3045,
+      "n_positive": 450,
+      "prevalence": 0.1477832512315271,
+      "mean_predicted_risk": 0.1400718564393998,
+      "calibration_in_the_large": -0.0077113947921273185,
+      "brier_score": 0.02297788670044601,
+      "roc_auc": 0.9943284093341896,
+      "pr_auc_average_precision": 0.9699107080118763,
+      "log_loss": 0.07859023197184246,
+      "reliability_curve": [
+        {
+          "bin": 0,
+          "lower": 0.0,
+          "upper": 0.1,
+          "count": 2533,
+          "mean_predicted": 0.002133475124262256,
+          "observed_frequency": 0.010264508487958943
+        },
+        {
+          "bin": 1,
+          "lower": 0.1,
+          "upper": 0.2,
+          "count": 33,
+          "mean_predicted": 0.14757201098131412,
+          "observed_frequency": 0.24242424242424243
+        },
+        {
+          "bin": 2,
+          "lower": 0.2,
+          "upper": 0.3,
+          "count": 21,
+          "mean_predicted": 0.24594533301535107,
+          "observed_frequency": 0.38095238095238093
+        },
+        {
+          "bin": 3,
+          "lower": 0.3,
+          "upper": 0.4,
+          "count": 21,
+          "mean_predicted": 0.347179373105367,
+          "observed_frequency": 0.5238095238095238
+        },
+        {
+          "bin": 4,
+          "lower": 0.4,
+          "upper": 0.5,
+          "count": 16,
+          "mean_predicted": 0.43936621211469173,
+          "observed_frequency": 0.5
+        },
+        {
+          "bin": 5,
+          "lower": 0.5,
+          "upper": 0.6,
+          "count": 17,
+          "mean_predicted": 0.5445641103912803,
+          "observed_frequency": 0.5294117647058824
+        },
+        {
+          "bin": 6,
+          "lower": 0.6,
+          "upper": 0.7,
+          "count": 11,
+          "mean_predicted": 0.6519368290901184,
+          "observed_frequency": 0.5454545454545454
+        },
+        {
+          "bin": 7,
+          "lower": 0.7,
+          "upper": 0.8,
+          "count": 14,
+          "mean_predicted": 0.7446820608207158,
+          "observed_frequency": 0.9285714285714286
+        },
+        {
+          "bin": 8,
+          "lower": 0.8,
+          "upper": 0.9,
+          "count": 32,
+          "mean_predicted": 0.8510152008384466,
+          "observed_frequency": 0.78125
+        },
+        {
+          "bin": 9,
+          "lower": 0.9,
+          "upper": 1.0,
+          "count": 347,
+          "mean_predicted": 0.9875286037708909,
+          "observed_frequency": 0.968299711815562
+        }
+      ]
+    }
+  ],
+  "coherence": {
+    "train_oof": {
+      "origins": 14564,
+      "violations": 0
+    },
+    "validation": {
+      "origins": 3045,
+      "violations": 0
+    }
+  }
+}

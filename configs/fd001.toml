@@ -1,0 +1,11 @@
+[dataset]
+name = "FD001"
+training_file = "train_FD001.txt"
+official_test_file = "test_FD001.txt"
+official_rul_file = "RUL_FD001.txt"
+
+[split]
+seed = 42
+train_fraction = 0.70
+validation_fraction = 0.15
+test_fraction = 0.15

@@ -1,0 +1,19 @@
+{
+  "algorithm": "SHA-256",
+  "baseline_captured_before_repository_changes": true,
+  "historical_files_checked": 204,
+  "historical_files_unchanged": 204,
+  "historical_files_changed": 0,
+  "historical_files_added_within_protected_roots": 0,
+  "protected_roots": [
+    "data/raw",
+    "data/processed/fd001",
+    "reports/weibull",
+    "reports/classical_ml",
+    "reports/discrete_hazard",
+    "reports/anomaly_detection",
+    "reports/fusion",
+    "reports/telemetry_filtering",
+    "reports/eda"
+  ]
+}

@@ -1,0 +1,41 @@
+[models]
+version = "1.0.0"
+random_seed = 4301
+
+[features]
+windows = [5, 10, 20]
+relative_epsilon = 1.0e-12
+variance_epsilon = 0.0
+include_cycle = true
+
+[cross_validation]
+folds = 5
+seed = 4302
+
+[prediction]
+horizons = [15, 30]
+
+[random_forest]
+n_estimators = 150
+max_depth = 12
+min_samples_leaf = 4
+max_features = "sqrt"
+
+[xgboost]
+n_estimators = 200
+max_depth = 4
+learning_rate = 0.05
+subsample = 0.8
+colsample_bytree = 0.8
+min_child_weight = 2.0
+reg_lambda = 1.0
+tree_method = "hist"
+
+[evaluation]
+reliability_bins = 10
+log_loss_epsilon = 1.0e-15
+exploratory_threshold = 0.5
+
+[importance]
+permutation_repeats = 1
+seed = 4303

@@ -1,0 +1,22 @@
+[model]
+model_version = "1.0.0"
+random_seed = 4401
+n_estimators = 200
+max_samples = 256
+contamination = "auto"
+
+[healthy_region]
+# Experimental selection rule for detector fitting only; not a maintenance threshold.
+minimum_rul_exclusive = 60
+
+[features]
+windows = [5, 10, 20]
+
+[cross_validation]
+folds = 5
+seed = 4402
+
+[analysis]
+near_event_rul_inclusive = 30
+diagnostic_healthy_quantile = 0.95
+representative_units = 6

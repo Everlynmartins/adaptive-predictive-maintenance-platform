@@ -1,0 +1,19 @@
+{
+  "experiment": "FD001 telemetry reduction 0.11.0",
+  "policy": "SensorSubsetFilter(subset_train17)",
+  "training_data_manifest": "data/processed/fd001/split_manifest.json",
+  "training_regime": "matched policy; grouped unit_id folds; train/validation only",
+  "input_contract": "receiver-reconstructed causal values and age/validity metadata",
+  "features": "CausalTelemetryFeatures over the receiver stream; 17 variable raw fields",
+  "horizons": [15, 30],
+  "models": [
+    {"model_name": "xgboost", "model_version": "matched-0.11.0", "artifact": "xgboost_h15.joblib; xgboost_h30.joblib"},
+    {"model_name": "discrete_hazard", "model_version": "matched-0.11.0", "artifact": "discrete_hazard.joblib"},
+    {"model_name": "fusion", "model_version": "matched-0.11.0", "artifact": "stacking_h15.joblib; stacking_h30.joblib"}
+  ],
+  "calibration": "fitted inside grouped out-of-sample development workflow; thresholds selected on validation",
+  "dependencies": ["common FD001 telemetry", "receiver-aware preprocessing", "Python runtime", "causal feature schema", "horizon definition"],
+  "limitations": ["FD001 only", "no official NASA test", "no operational threshold", "SensorSubset selection is training-derived", "not a physical degradation model"],
+  "validation_evidence": "matched_development_results.json and matched_validation_metrics.parquet",
+  "test_evidence": "test_internal_metrics.json after freeze; see test_evaluation_receipt.json"
+}

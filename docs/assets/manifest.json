@@ -1,0 +1,74 @@
+[
+  {
+    "file": "screenshots/dashboard_main.png",
+    "source": "print1.png",
+    "caption": "Unit 1, cycle 191, H30: risk, visual health, model diagnostics and playback controls.",
+    "sha256": "af2f3374efb890ee6dae8e1edb5806e88e1dcbe163178f2b15a73063ac52e532"
+  },
+  {
+    "file": "screenshots/operational_history.png",
+    "source": "print2.png",
+    "caption": "API-retrieved persisted predictions and alerts from the cloud replay.",
+    "sha256": "5d42be590a03ab5f520898bf4d29bea0bd9289b7647aadad234cdfa72792d6c3"
+  },
+  {
+    "file": "results/cloud_e2e_validation.png",
+    "source": "print3.png",
+    "caption": "Operator-provided real cloud E2E PASS: 40 cycles, 40 predictions, 3 alerts.",
+    "sha256": "70b9c5a862c4d94256684a4b649bac456551cb128372448280e00975ac3b5cda"
+  },
+  {
+    "file": "results/ecs_recovery_validation.png",
+    "source": "print4.png",
+    "caption": "Operator-provided controlled ECS task replacement and preserved RDS records.",
+    "sha256": "40400d289238dcb61dbfd76490fdf173a9be6f3a8939ee84afdfa451f0298022"
+  },
+  {
+    "file": "results/ecs_health.png",
+    "source": "print5.png",
+    "caption": "One active ECS task with healthy API and dashboard containers.",
+    "sha256": "5d767cc8b351fef8de5ec5e5a19d738c3d3d3cbd484b7c3947b4c72b76796c5e"
+  },
+  {
+    "file": "screenshots/model_probabilities.png",
+    "source": "risk_model_pbm.png",
+    "caption": "Displayed horizon probabilities from the individual models and fusion.",
+    "sha256": "6116b3eb73d620ee31e5d5813b4031e287d06f3517c82b38f2c77ba48a8f473a"
+  },
+  {
+    "file": "screenshots/risk_trajectory.png",
+    "source": "risk_model_rot.png",
+    "caption": "Displayed selected and full-telemetry risk trajectories; overlapping curves in this screenshot.",
+    "sha256": "eb0b13a0edad7cb5a53967164c6e15a3a9a39314a21ad8396a7d98c90bfab563"
+  },
+  {
+    "file": "screenshots/anomaly_trajectory.png",
+    "source": "anomaly_alerts.png",
+    "caption": "Anomaly indicator over cycles; this is not a failure probability.",
+    "sha256": "7188bb9695e5c8e04988eb4b4b6b1047ed9adfa8145081f000c9c0b17d1a3772"
+  },
+  {
+    "file": "screenshots/important_sensors.png",
+    "source": "important_sensors.png",
+    "caption": "Displayed sensor attribution snapshot; no physical or causal interpretation is implied.",
+    "sha256": "7a4ab8d005dd3b258693ca7a2381f80fc745c1757aaddfc33785bc555eba1fd1"
+  },
+  {
+    "file": "screenshots/model_comparison.png",
+    "source": "comparison.png",
+    "caption": "Model comparison screenshot; omitted from the central results table because the image has no metric-axis label.",
+    "sha256": "cf2a7e8a15eae97d0096d4a8810448db24dc373c88a5822f5eeb0ad903493f09"
+  },
+  {
+    "file": "screenshots/telemetry_full_stream.png",
+    "source": "telemetry_age.png",
+    "caption": "Full-stream cumulative estimated bytes and transmission indicator; not evidence of byte reduction or sensor age.",
+    "sha256": "72201c7d19fae2b6fa5690e6d80971182694e893a8eecb8c0c2146d1bd73c725"
+  },
+  {
+    "file": "results/telemetry_bytes_vs_pr_auc.png",
+    "source": "reports/telemetry_filtering/figures/bytes_vs_pr_auc.png",
+    "caption": "Existing scientific figure: estimated bytes versus PR AUC. Copied without altering the figure.",
+    "sha256": "4ad00a5f01b9a844167c90b44cad80dd96253348580e8e724794c3c0d4463304"
+  }
+]

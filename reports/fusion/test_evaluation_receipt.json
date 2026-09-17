@@ -1,0 +1,14 @@
+{
+  "freeze_manifest_sha256": "1a118bbe2201bd488fb65f112c824a747baa746540bf971f4074946f506b1829",
+  "metrics_sha256": "8809ff9a29eca45dfa68a836617c3f1213e39e6e5f2b35ddb7ac4a30a6257fd2",
+  "models_calibrators_thresholds_changed_after_read": false,
+  "official_test_read": false,
+  "partition": "test_internal",
+  "prediction_rows": 5844,
+  "read_count": 1,
+  "rows_read": 2937,
+  "status": "complete",
+  "test_internal_sha256": "c66022da610530817c0836f24ad4be6d1a0bca658b7db22219c9c4f766a5a6d5",
+  "test_predictions_sha256": "ba326e532b5160f4631e098a6e377060b20a1a1a8cb580fbe796c2133d52e5d9",
+  "units_read": 15
+}

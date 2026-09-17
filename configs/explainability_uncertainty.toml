@@ -1,0 +1,24 @@
+[analysis]
+validation_partition = "validation"
+reliability_bins = 10
+top_features_per_observation = 5
+top_sensors_per_observation = 3
+neural_ablation_origins = 256
+shap_batch_size = 512
+
+[bootstrap]
+resamples = 1000
+confidence_level = 0.95
+seed = 4801
+
+[alert_policy]
+h15_threshold = 0.20137471216222377
+h30_threshold = 0.15811159606353034
+persistence_cycles = 3
+source = "configs/fusion_alert_policy.toml"
+
+[scope]
+use_test_internal = false
+use_official_test = false
+use_official_rul = false
+retrain_models = false

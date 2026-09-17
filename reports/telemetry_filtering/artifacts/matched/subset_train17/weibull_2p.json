@@ -1,0 +1,17 @@
+{
+  "artifact_schema": "predictive-maintenance.weibull-2p.v1",
+  "fit": {
+    "estimation": "maximum_likelihood",
+    "location": 0.0,
+    "log_likelihood": -372.2860707586592,
+    "n_events": 70,
+    "n_observations": 70
+  },
+  "model_name": "weibull_2p_population_age_fd001_telemetry",
+  "model_version": "1.1.0-telemetry",
+  "parameters": {
+    "beta": 4.4284658362585585,
+    "eta": 227.9879737769514
+  },
+  "training_data_manifest": {}
+}

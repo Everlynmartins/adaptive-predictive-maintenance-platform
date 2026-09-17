@@ -1,0 +1,26 @@
+{
+  "python": "3.11.16",
+  "environment": {
+    "torch": "2.14.0+cpu",
+    "pyarrow": "25.0.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit_learn": "1.9.1",
+    "xgboost": "3.2.0",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0"
+  },
+  "tests": {
+    "tcn": {"passed": 12, "subtests_passed": 11, "seconds": 4.12},
+    "contracts_assurance_tcn": {"passed": 19, "subtests_passed": 112, "seconds": 4.07},
+    "full_suite": {"passed": 131, "subtests_passed": 194, "seconds": 25.88, "warnings": 0}
+  },
+  "pip_check": "No broken requirements found.",
+  "source_mode": "processed_parquet",
+  "train_units": 70,
+  "validation_units": 15,
+  "test_internal_read": false,
+  "official_test_read": false,
+  "official_rul_read": false,
+  "tcn_in_current_fusion": false
+}

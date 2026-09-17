@@ -1,0 +1,20 @@
+# Generated from validation only; experimental demonstrator policy.
+policy_version = "1.0.0"
+source_partition = "validation"
+primary_fusion = "stacking"
+
+[thresholds]
+attention = 0.0065678744209281296
+alert = 0.15811159606353034
+critical = 0.20137471216222377
+
+[horizons]
+attention = 30
+alert = 30
+critical = 15
+
+[persistence]
+cycles = 3
+
+[interpretation]
+statement = "Experimental FD001 demonstrator levels; not real aeronautical limits."

@@ -1,0 +1,658 @@
+{
+  "anomaly_semantics": "analytical abnormality indicator; not probability and not part of arithmetic mean",
+  "artifact_sha256": {
+    "reports/fusion/artifacts/simple_calibrator_h15.joblib": "7d11b6fbaa03baf0afbde7fbc404a779e809471e4cd912ffe536a69a967a4fd1",
+    "reports/fusion/artifacts/simple_calibrator_h30.joblib": "85b35e0ffa9f97d0d6242e87f12aceca2148ff3dcfec97bc8302bb2dc6202fb7",
+    "reports/fusion/artifacts/stacking_calibrator_h15.joblib": "b9339c46d5f756e19fe7a2eb7a1905f99297470b4752ec0309d611a9abebf137",
+    "reports/fusion/artifacts/stacking_calibrator_h30.joblib": "0390cfc6d53a871b2029869a3ae1a3414a06f1973aa933fdbe19f28fc246fb79",
+    "reports/fusion/artifacts/stacking_h15.joblib": "6424c9d753800cc64e22dd4e247a6d3016d41f4cc222e713db389d223052c49a",
+    "reports/fusion/artifacts/stacking_h30.joblib": "80d0da5d3262858f1ffff0284681f647da48f8b514de4fce39d60adc0481246e"
+  },
+  "assumptions": [
+    "ASM022",
+    "ASM023",
+    "ASM024",
+    "ASM025"
+  ],
+  "auxiliary_covariates": [
+    "anomaly_score"
+  ],
+  "base_probability_features": [
+    "risk_weibull",
+    "risk_random_forest",
+    "risk_xgboost",
+    "risk_discrete_hazard"
+  ],
+  "calibration": {
+    "simple": {
+      "15": "platt",
+      "30": "platt"
+    },
+    "stacking": {
+      "15": "platt",
+      "30": "platt"
+    }
+  },
+  "configuration": {
+    "alert_policy": {
+      "alert_min_precision": 0.85,
+      "attention_min_recall": 0.98,
+      "critical_min_recall": 0.9,
+      "persistence_cycles": 3
+    },
+    "calibration": {
+      "folds": 5,
+      "methods": [
+        "none",
+        "platt",
+        "isotonic"
+      ],
+      "seed": 4503
+    },
+    "cross_validation": {
+      "folds": 5,
+      "seed": 4502
+    },
+    "evaluation": {
+      "log_loss_epsilon": 1e-15,
+      "reliability_bins": 10
+    },
+    "stacking": {
+      "include_anomaly_covariate": true,
+      "max_iterations": 1000,
+      "model_version": "1.0.0",
+      "random_seed": 4501,
+      "regularization_c": 1.0
+    }
+  },
+  "dependencies": {
+    "joblib": "1.6.0",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "python": "3.11.16",
+    "scikit-learn": "1.9.1"
+  },
+  "frozen_test_evaluation": {
+    "metrics": {
+      "evaluation_protocol": {
+        "frozen_manifest": "reports\\fusion\\freeze_manifest.json",
+        "models_calibrators_thresholds_changed_after_read": false,
+        "read_count": 1,
+        "used_for_selection": false
+      },
+      "simple": {
+        "15": {
+          "brier_score": 0.010307111740251243,
+          "calibration_in_the_large": 0.0010315093346102838,
+          "classification": {
+            "f1": 0.8752475247524752,
+            "false_negative": 4,
+            "false_positive": 59,
+            "precision": 0.7892857142857143,
+            "recall": 0.9822222222222222,
+            "threshold": 0.20137471216222377,
+            "true_negative": 2638,
+            "true_positive": 221
+          },
+          "log_loss": 0.033448021745887374,
+          "mean_predicted_risk": 0.07803356272270064,
+          "n_observations": 2922,
+          "n_positive": 225,
+          "pr_auc_average_precision": 0.9756967087614254,
+          "prevalence": 0.07700205338809035,
+          "reliability_curve": [
+            {
+              "bin": 0,
+              "count": 2627,
+              "lower": 0.0,
+              "mean_predicted": 0.0009826922629610029,
+              "observed_frequency": 0.00038066235249333843,
+              "upper": 0.1
+            },
+            {
+              "bin": 1,
+              "count": 15,
+              "lower": 0.1,
+              "mean_predicted": 0.16451687124778508,
+              "observed_frequency": 0.2,
+              "upper": 0.2
+            },
+            {
+              "bin": 2,
+              "count": 14,
+              "lower": 0.2,
+              "mean_predicted": 0.24268377389447957,
+              "observed_frequency": 0.14285714285714285,
+              "upper": 0.3
+            },
+            {
+              "bin": 3,
+              "count": 13,
+              "lower": 0.3,
+              "mean_predicted": 0.3337680691158024,
+              "observed_frequency": 0.3076923076923077,
+              "upper": 0.4
+            },
+            {
+              "bin": 4,
+              "count": 15,
+              "lower": 0.4,
+              "mean_predicted": 0.4504545865852651,
+              "observed_frequency": 0.4,
+              "upper": 0.5
+            },
+            {
+              "bin": 5,
+              "count": 12,
+              "lower": 0.5,
+              "mean_predicted": 0.5575966812690372,
+              "observed_frequency": 0.16666666666666666,
+              "upper": 0.6
+            },
+            {
+              "bin": 6,
+              "count": 19,
+              "lower": 0.6,
+              "mean_predicted": 0.6499759106427437,
+              "observed_frequency": 0.8421052631578947,
+              "upper": 0.7
+            },
+            {
+              "bin": 7,
+              "count": 23,
+              "lower": 0.7,
+              "mean_predicted": 0.7523560917987705,
+              "observed_frequency": 0.6086956521739131,
+              "upper": 0.8
+            },
+            {
+              "bin": 8,
+              "count": 23,
+              "lower": 0.8,
+              "mean_predicted": 0.8581182484812034,
+              "observed_frequency": 0.7391304347826086,
+              "upper": 0.9
+            },
+            {
+              "bin": 9,
+              "count": 161,
+              "lower": 0.9,
+              "mean_predicted": 0.9465204707858935,
+              "observed_frequency": 0.9937888198757764,
+              "upper": 1.0
+            }
+          ],
+          "roc_auc": 0.9978725332674164
+        },
+        "30": {
+          "brier_score": 0.016618703493976605,
+          "calibration_in_the_large": -0.011988101300378556,
+          "classification": {
+            "f1": 0.9124613800205972,
+            "false_negative": 7,
+            "false_positive": 78,
+            "precision": 0.8502879078694817,
+            "recall": 0.9844444444444445,
+            "threshold": 0.15811159606353034,
+            "true_negative": 2394,
+            "true_positive": 443
+          },
+          "log_loss": 0.05735037333410697,
+          "mean_predicted_risk": 0.14201600547580215,
+          "n_observations": 2922,
+          "n_positive": 450,
+          "pr_auc_average_precision": 0.9853024932650559,
+          "prevalence": 0.1540041067761807,
+          "reliability_curve": [
+            {
+              "bin": 0,
+              "count": 2376,
+              "lower": 0.0,
+              "mean_predicted": 0.0030333524137774936,
+              "observed_frequency": 0.0016835016835016834,
+              "upper": 0.1
+            },
+            {
+              "bin": 1,
+              "count": 38,
+              "lower": 0.1,
+              "mean_predicted": 0.14435756530143792,
+              "observed_frequency": 0.21052631578947367,
+              "upper": 0.2
+            },
+            {
+              "bin": 2,
+              "count": 30,
+              "lower": 0.2,
+              "mean_predicted": 0.24385597577021556,
+              "observed_frequency": 0.23333333333333334,
+              "upper": 0.3
+            },
+            {
+              "bin": 3,
+              "count": 20,
+              "lower": 0.3,
+              "mean_predicted": 0.3350875589616077,
+              "observed_frequency": 0.35,
+              "upper": 0.4
+            },
+            {
+              "bin": 4,
+              "count": 29,
+              "lower": 0.4,
+              "mean_predicted": 0.44339451745914943,
+              "observed_frequency": 0.7586206896551724,
+              "upper": 0.5
+            },
+            {
+              "bin": 5,
+              "count": 18,
+              "lower": 0.5,
+              "mean_predicted": 0.5493784312092785,
+              "observed_frequency": 0.6666666666666666,
+              "upper": 0.6
+            },
+            {
+              "bin": 6,
+              "count": 35,
+              "lower": 0.6,
+              "mean_predicted": 0.6463520812984519,
+              "observed_frequency": 0.5714285714285714,
+              "upper": 0.7
+            },
+            {
+              "bin": 7,
+              "count": 32,
+              "lower": 0.7,
+              "mean_predicted": 0.7444519857360172,
+              "observed_frequency": 0.90625,
+              "upper": 0.8
+            },
+            {
+              "bin": 8,
+              "count": 58,
+              "lower": 0.8,
+              "mean_predicted": 0.8688156510897328,
+              "observed_frequency": 0.9482758620689655,
+              "upper": 0.9
+            },
+            {
+              "bin": 9,
+              "count": 286,
+              "lower": 0.9,
+              "mean_predicted": 0.9394306217170632,
+              "observed_frequency": 1.0,
+              "upper": 1.0
+            }
+          ],
+          "roc_auc": 0.9972150305645451
+        }
+      },
+      "stacking": {
+        "15": {
+          "brier_score": 0.010178016218785469,
+          "calibration_in_the_large": 0.005342966339897642,
+          "classification": {
+            "f1": 0.8835341365461848,
+            "false_negative": 5,
+            "false_positive": 53,
+            "precision": 0.8058608058608059,
+            "recall": 0.9777777777777777,
+            "threshold": 0.20137471216222377,
+            "true_negative": 2644,
+            "true_positive": 220
+          },
+          "log_loss": 0.03318955200713004,
+          "mean_predicted_risk": 0.082345019727988,
+          "n_observations": 2922,
+          "n_positive": 225,
+          "pr_auc_average_precision": 0.9793090915991586,
+          "prevalence": 0.07700205338809035,
+          "reliability_curve": [
+            {
+              "bin": 0,
+              "count": 2632,
+              "lower": 0.0,
+              "mean_predicted": 0.0023567176358402467,
+              "observed_frequency": 0.00037993920972644377,
+              "upper": 0.1
+            },
+            {
+              "bin": 1,
+              "count": 17,
+              "lower": 0.1,
+              "mean_predicted": 0.15287349052191296,
+              "observed_frequency": 0.23529411764705882,
+              "upper": 0.2
+            },
+            {
+              "bin": 2,
+              "count": 13,
+              "lower": 0.2,
+              "mean_predicted": 0.24648371726049262,
+              "observed_frequency": 0.07692307692307693,
+              "upper": 0.3
+            },
+            {
+              "bin": 3,
+              "count": 8,
+              "lower": 0.3,
+              "mean_predicted": 0.3222698365341006,
+              "observed_frequency": 0.375,
+              "upper": 0.4
+            },
+            {
+              "bin": 4,
+              "count": 8,
+              "lower": 0.4,
+              "mean_predicted": 0.44978592200171497,
+              "observed_frequency": 0.375,
+              "upper": 0.5
+            },
+            {
+              "bin": 5,
+              "count": 12,
+              "lower": 0.5,
+              "mean_predicted": 0.553689334547786,
+              "observed_frequency": 0.5,
+              "upper": 0.6
+            },
+            {
+              "bin": 6,
+              "count": 12,
+              "lower": 0.6,
+              "mean_predicted": 0.6594767834477305,
+              "observed_frequency": 0.4166666666666667,
+              "upper": 0.7
+            },
+            {
+              "bin": 7,
+              "count": 13,
+              "lower": 0.7,
+              "mean_predicted": 0.7513231444683394,
+              "observed_frequency": 0.6923076923076923,
+              "upper": 0.8
+            },
+            {
+              "bin": 8,
+              "count": 26,
+              "lower": 0.8,
+              "mean_predicted": 0.851495425392584,
+              "observed_frequency": 0.6153846153846154,
+              "upper": 0.9
+            },
+            {
+              "bin": 9,
+              "count": 181,
+              "lower": 0.9,
+              "mean_predicted": 0.972185678131835,
+              "observed_frequency": 0.9779005524861878,
+              "upper": 1.0
+            }
+          ],
+          "roc_auc": 0.9981477361677584
+        },
+        "30": {
+          "brier_score": 0.013537792782322733,
+          "calibration_in_the_large": -0.007160564533994135,
+          "classification": {
+            "f1": 0.92534174553102,
+            "false_negative": 10,
+            "false_positive": 61,
+            "precision": 0.8782435129740519,
+            "recall": 0.9777777777777777,
+            "threshold": 0.15811159606353034,
+            "true_negative": 2411,
+            "true_positive": 440
+          },
+          "log_loss": 0.04978235624872981,
+          "mean_predicted_risk": 0.14684354224218657,
+          "n_observations": 2922,
+          "n_positive": 450,
+          "pr_auc_average_precision": 0.9897770301145904,
+          "prevalence": 0.1540041067761807,
+          "reliability_curve": [
+            {
+              "bin": 0,
+              "count": 2402,
+              "lower": 0.0,
+              "mean_predicted": 0.0056106533360379945,
+              "observed_frequency": 0.0016652789342214821,
+              "upper": 0.1
+            },
+            {
+              "bin": 1,
+              "count": 31,
+              "lower": 0.1,
+              "mean_predicted": 0.14346469268709583,
+              "observed_frequency": 0.3225806451612903,
+              "upper": 0.2
+            },
+            {
+              "bin": 2,
+              "count": 18,
+              "lower": 0.2,
+              "mean_predicted": 0.24733450723670536,
+              "observed_frequency": 0.16666666666666666,
+              "upper": 0.3
+            },
+            {
+              "bin": 3,
+              "count": 18,
+              "lower": 0.3,
+              "mean_predicted": 0.3422798056469825,
+              "observed_frequency": 0.3333333333333333,
+              "upper": 0.4
+            },
+            {
+              "bin": 4,
+              "count": 19,
+              "lower": 0.4,
+              "mean_predicted": 0.43581565892712354,
+              "observed_frequency": 0.5263157894736842,
+              "upper": 0.5
+            },
+            {
+              "bin": 5,
+              "count": 19,
+              "lower": 0.5,
+              "mean_predicted": 0.5518046535385551,
+              "observed_frequency": 0.8421052631578947,
+              "upper": 0.6
+            },
+            {
+              "bin": 6,
+              "count": 19,
+              "lower": 0.6,
+              "mean_predicted": 0.6513071923015368,
+              "observed_frequency": 0.7368421052631579,
+              "upper": 0.7
+            },
+            {
+              "bin": 7,
+              "count": 25,
+              "lower": 0.7,
+              "mean_predicted": 0.7527234509204352,
+              "observed_frequency": 0.76,
+              "upper": 0.8
+            },
+            {
+              "bin": 8,
+              "count": 36,
+              "lower": 0.8,
+              "mean_predicted": 0.8547011531343258,
+              "observed_frequency": 0.9444444444444444,
+              "upper": 0.9
+            },
+            {
+              "bin": 9,
+              "count": 335,
+              "lower": 0.9,
+              "mean_predicted": 0.9546645601100768,
+              "observed_frequency": 0.9970149253731343,
+              "upper": 1.0
+            }
+          ],
+          "roc_auc": 0.9980654440848615
+        }
+      }
+    },
+    "partition": "test_internal",
+    "read_count": 1,
+    "used_for_selection": false
+  },
+  "input_contract": "aligned base OOF probabilities and OOF anomaly score by unit_id/cycle/horizon",
+  "limitations": [
+    "FD001 development population only",
+    "validation reused for threshold policy",
+    "shared dependencies prevent independence claims",
+    "test_internal is one frozen phase evaluation"
+  ],
+  "model_name": "fd001_logistic_probability_stacking",
+  "model_version": "1.0.0",
+  "official_test_read": false,
+  "output_contract": "risk probability with explicit horizon/status; survival=1-risk; health=100*survival",
+  "test_internal_read": true,
+  "thresholds": {
+    "alert": 0.15811159606353034,
+    "alert_horizon": 30,
+    "attention": 0.00656787442092813,
+    "attention_horizon": 30,
+    "critical": 0.20137471216222377,
+    "critical_horizon": 15,
+    "persistence_cycles": 3
+  },
+  "training_data_manifest": {
+    "dataset": "FD001",
+    "official_evaluation": {
+      "files_present": {
+        "official_rul": true,
+        "official_test": true
+      },
+      "used": false
+    },
+    "rows": {
+      "test_internal": 2937,
+      "train": 14634,
+      "validation": 3060
+    },
+    "source": {
+      "file": "train_FD001.txt",
+      "sha256": "963b5e22825b34d8b21c69e1aeb4af3e647050eb672ee8834ba4b5d91d2de0f8"
+    },
+    "split": {
+      "seed": 42,
+      "test_fraction": 0.15,
+      "train_fraction": 0.7,
+      "validation_fraction": 0.15
+    },
+    "units": {
+      "test_internal": [
+        4,
+        5,
+        12,
+        14,
+        15,
+        18,
+        29,
+        32,
+        36,
+        55,
+        70,
+        76,
+        82,
+        87,
+        95
+      ],
+      "train": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        31,
+        33,
+        34,
+        35,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        69,
+        71,
+        73,
+        74,
+        75,
+        77,
+        79,
+        80,
+        81,
+        83,
+        84,
+        86,
+        88,
+        91,
+        92,
+        93,
+        97,
+        99,
+        100
+      ],
+      "validation": [
+        1,
+        26,
+        28,
+        30,
+        54,
+        58,
+        65,
+        72,
+        78,
+        85,
+        89,
+        90,
+        94,
+        96,
+        98
+      ]
+    }
+  }
+}

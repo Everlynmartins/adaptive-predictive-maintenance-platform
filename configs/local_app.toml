@@ -1,0 +1,42 @@
+[application]
+version = "1.0.0"
+project_version = "0.16.0"
+dataset = "NASA C-MAPSS FD001"
+partition = "validation"
+horizons = [15, 30]
+default_horizon = 30
+default_model = "fusion"
+default_policy = "full"
+default_inference_cadence = "each_cycle"
+allowed_inference_cadences = ["each_cycle", "on_transmission"]
+allowed_models = ["fusion", "xgboost", "discrete_hazard", "weibull", "random_forest", "tcn", "transformer"]
+filtered_models = ["fusion", "xgboost", "discrete_hazard"]
+allowed_policies = ["full", "fixed_k2", "fixed_k3", "fixed_k5", "subset_train17", "adaptive_q95", "adaptive_q99"]
+retrospective_default = false
+
+[contracts]
+health_score_statement = "Visual transformation dependent on horizon: 100 * (1 - risk_score)."
+anomaly_statement = "Analytical abnormality indicator; not a failure probability."
+disagreement_statement = "Divergence among comparable model probabilities; not a confidence interval."
+rul_statement = "Evaluation-only retrospective information unavailable in production."
+
+[paths]
+split_manifest = "data/processed/fd001/split_manifest.json"
+validation_data = "data/processed/fd001/validation.parquet"
+explanations = "reports/explainability_uncertainty/validation_explanations.parquet"
+telemetry_artifacts = "reports/telemetry_filtering/artifacts/full_trained"
+telemetry_metrics = "reports/telemetry_filtering/artifacts/development_metrics.parquet"
+telemetry_metrics_by_unit = "reports/telemetry_filtering/artifacts/development_metrics_by_unit.parquet"
+model_calibration = "reports/explainability_uncertainty/calibration_metrics.parquet"
+requirements = "docs/safety_requirements.md"
+assumptions = "docs/safety_assumptions.md"
+traceability = "docs/traceability_matrix.csv"
+fusion_policy = "configs/fusion_alert_policy.toml"
+telemetry_thresholds = "reports/telemetry_filtering/artifacts/alert_thresholds.json"
+
+[scope]
+test_internal_read = false
+official_test_read = false
+official_rul_read = false
+models_retrained = false
+certification_claim = false

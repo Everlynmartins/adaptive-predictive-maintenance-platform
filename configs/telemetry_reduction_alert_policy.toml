@@ -1,0 +1,41 @@
+# Generated from validation only for the FD001 telemetry experiment.
+version = "1.0.0"
+source_partition = "validation"
+persistence_cycles = 3
+interpretation = "Experimental FD001 thresholds; not real aeronautical limits."
+
+[thresholds."full.discrete_hazard"]
+h15 = 0.21686605242646084
+h30 = 0.18136845701441084
+
+[thresholds."full.fusion"]
+h15 = 0.20137471216222377
+h30 = 0.15811159606353034
+
+[thresholds."full.xgboost"]
+h15 = 0.47195300459861755
+h30 = 0.33175826072692871
+
+[thresholds."subset_train17.xgboost"]
+h15 = 0.50850194692611694
+h30 = 0.28736859560012817
+
+[thresholds."subset_train17.discrete_hazard"]
+h15 = 0.21686605242646084
+h30 = 0.18136845701441084
+
+[thresholds."subset_train17.fusion"]
+h15 = 0.032807435303990919
+h30 = 0.1781401772768412
+
+[thresholds."fixed_k3.xgboost"]
+h15 = 0.63791853189468384
+h30 = 0.47752645611763
+
+[thresholds."fixed_k3.discrete_hazard"]
+h15 = 0.30464421007453346
+h30 = 0.40896735055977096
+
+[thresholds."fixed_k3.fusion"]
+h15 = 0.49061633709769104
+h30 = 0.41277357580236967

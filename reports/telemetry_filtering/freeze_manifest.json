@@ -1,0 +1,112 @@
+{
+  "artifact_sha256": {
+    "configs/telemetry_reduction_alert_policy.toml": "fc41e714bede925f6cacdca561a04830910dbc00027176b2c92c568d4b00ee12",
+    "configs/telemetry_reduction_experiment.toml": "85870e4886db5e5633f751fb9396dac6271fa90dc32b3128791b4b0ce161f864",
+    "data/processed/fd001/split_manifest.json": "255eb98adbf71c3dc096c6e63331f28a7c24838915fe2a626d28775cca3aa0d1",
+    "reports/fusion/test_evaluation_receipt.json": "709f5cb84057a89cd89d00208ff1da8c8382d3026e414917bdef83f9eecbea92",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/causal_feature_engineer.json": "0ff3f2cc2890ee21d05369d5cede300440943459230a6880133125ad57085068",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/discrete_hazard.joblib": "f1dc7399eb58d9615833faa2b7ca82f985e6f5248d8577abd047792f7721bae9",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/fold_manifest.json": "130afb64f98f88f9fd5031bf60481ee69d6c26af8ae5e51a169e839a3aaefbe8",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/isolation_forest.joblib": "7d5bd1f7c2ca85dae81e4d0088ae99daba5a0188b255c632120e6cd859982e94",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/random_forest_h15.joblib": "bb74efa5edfa3828e7b1a536fa1c28e81203493bdd3abea30c24241392cb1177",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/random_forest_h30.joblib": "bd72dcb7799bf936d480299bf9f1348b755a0d82f404ad3a2c7cbfaffddfa765",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/stacking_calibrator_h15.joblib": "cb3823db4a0d770bdac0851317cbcfdab689809ba94a77dbbf4bf0d183538142",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/stacking_calibrator_h30.joblib": "e1e42e898dacabf8e46ad33b140b578184713eaba69fe4d6e48452772b212b7b",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/stacking_h15.joblib": "71059500484dc24bc8dcc9ff4725e1db9d8d55262640a2efa8258ef723bd707d",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/stacking_h30.joblib": "7317d573024cadde7e3a8a37061e62175713d6c6c005cfa94613651f3781acb5",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/train_oof_inputs_and_predictions.parquet": "d12816094dc7ece1cd9d01ef0769158425da4e9ed856cc768e48e6124e2d769b",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/validation_predictions.parquet": "5c582f83dfce2adca4f2b55f8cffaa6ef2f57cc9f4310b2e8f8be450eece881a",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/validation_receiver_states.parquet": "bffbd0704fb113d17dd3b9b083b6a7f803295495c79602309ae10a5ee31f26db",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/weibull_2p.json": "3f53e8489e071f4693982c9a79f49e8f7ba9befc77f1cac1d09709d4a7972dca",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/xgboost_h15.joblib": "1b23370e460768306b39805af83856d77cc537028d08b8f964296162a2147e06",
+    "reports/telemetry_filtering/artifacts/matched/subset_train17/xgboost_h30.joblib": "00d785c27b4efe1c131e5dadefe8292fcf149ad0066b5c53bd5b5d94eaa2d54b",
+    "reports/telemetry_filtering/development_results.json": "23c3893683978563d0d2afcb04feb4bcb78fe6223f8d43824b331d444df7210e",
+    "src/predictive_maintenance/application/telemetry_reduction_fd001.py": "0d91987f7f207c05a6287b27f44a6851447a7520ff861a749cf7bbd28b63fd04",
+    "src/predictive_maintenance/features/causal.py": "6ef7f55c15b4c3121ee2e4b6b64a0367cacb339288f127e28ac913e6ee3cdfbf",
+    "src/predictive_maintenance/filtering/experiment.py": "77267cda8dfcb49429ff9280783f8aa939ca51df7908bb001f7cf0cb19c6f182"
+  },
+  "configuration_sha256": "85870e4886db5e5633f751fb9396dac6271fa90dc32b3128791b4b0ce161f864",
+  "criteria": {
+    "maximum_brier_increase": 0.01,
+    "maximum_data_age_cycles": 3,
+    "maximum_degraded_fraction": 0.75,
+    "maximum_false_alert_episodes_per_unit_increase": 0.25,
+    "maximum_median_alert_latency_cycles": 3.0,
+    "maximum_median_lead_time_loss_cycles": 3.0,
+    "maximum_missed_anticipated_failures": 0,
+    "maximum_p90_alert_latency_cycles": 5.0,
+    "maximum_pr_auc_absolute_loss": 0.03,
+    "maximum_precision_absolute_loss": 0.05,
+    "maximum_recall_absolute_loss": 0.05,
+    "maximum_roc_auc_absolute_loss": 0.015,
+    "maximum_stale_fraction": 0.0,
+    "maximum_unavailable_fraction": 0.0,
+    "minimum_byte_reduction_fraction": 0.2,
+    "scope": "All limits are exploratory FD001 selection criteria fixed before this phase-specific test_internal read."
+  },
+  "frozen_policy_ids": [
+    "full",
+    "subset_train17"
+  ],
+  "matched_candidates_evaluated": [
+    "subset_train17",
+    "fixed_k3"
+  ],
+  "official_nasa_test_read": false,
+  "phase": "telemetry_reduction_0.11.0",
+  "post_test_adjustment_allowed": false,
+  "prior_exposure_receipt": "reports/fusion/test_evaluation_receipt.json",
+  "prior_project_test_internal_exposure": true,
+  "reduction_candidates": [
+    "subset_train17"
+  ],
+  "scope": "Phase-specific frozen comparison; test_internal was already exposed in phase 0.9.0.",
+  "state": "frozen",
+  "test_evaluation_receipt_sha256": "8cacf679534b3453d6bbb856689688fbabb9441df65f3ecb6eac017fc886f41f",
+  "test_internal_read": true,
+  "thresholds": {
+    "fixed_k3": {
+      "discrete_hazard": {
+        "15": 0.30464421007453346,
+        "30": 0.40896735055977096
+      },
+      "fusion": {
+        "15": 0.49061633709769104,
+        "30": 0.4127735758023697
+      },
+      "xgboost": {
+        "15": 0.6379185318946838,
+        "30": 0.47752645611763
+      }
+    },
+    "full": {
+      "discrete_hazard": {
+        "15": 0.21686605242646084,
+        "30": 0.18136845701441084
+      },
+      "fusion": {
+        "15": 0.20137471216222377,
+        "30": 0.15811159606353034
+      },
+      "xgboost": {
+        "15": 0.47195300459861755,
+        "30": 0.3317582607269287
+      }
+    },
+    "subset_train17": {
+      "discrete_hazard": {
+        "15": 0.21686605242646084,
+        "30": 0.18136845701441084
+      },
+      "fusion": {
+        "15": 0.03280743530399092,
+        "30": 0.1781401772768412
+      },
+      "xgboost": {
+        "15": 0.5085019469261169,
+        "30": 0.2873685956001282
+      }
+    }
+  },
+  "validation_results_sha256": "f224d9472183b1fa78d3e47b8225732a93f630f56c487c744fe1f7717621fa16"
+}

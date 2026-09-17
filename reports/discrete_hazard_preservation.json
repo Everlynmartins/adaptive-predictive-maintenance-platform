@@ -1,0 +1,12 @@
+{
+  "configs/classical_ml.toml": true,
+  "data/processed/fd001/split_manifest.json": true,
+  "data/processed/fd001/train.parquet": true,
+  "data/processed/fd001/validation.parquet": true,
+  "reports/classical_ml/artifacts/causal_feature_engineer.json": true,
+  "reports/classical_ml/artifacts/models/random_forest_h15.joblib": true,
+  "reports/classical_ml/artifacts/models/random_forest_h30.joblib": true,
+  "reports/classical_ml/artifacts/models/xgboost_h15.joblib": true,
+  "reports/classical_ml/artifacts/models/xgboost_h30.joblib": true,
+  "reports/weibull/artifacts/weibull_2p_model.json": true
+}

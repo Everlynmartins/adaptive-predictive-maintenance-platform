@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "adaptive-predictive-maintenance"
+version = "0.16.0"
+description = "Local predictive-maintenance platform with reliability and classical ML baselines"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "numpy>=1.26,<3",
+    "pandas>=2.2,<4",
+    "pyarrow>=15",
+    "matplotlib>=3.8,<4",
+    "scikit-learn>=1.5,<2",
+    "xgboost>=2.1,<4",
+    "scipy>=1.11,<2",
+    "joblib>=1.3,<2",
+    "threadpoolctl>=3.2,<4",
+    "torch>=2.2,<3",
+    "shap>=0.46,<1",
+    "streamlit>=1.40,<2",
+    "fastapi>=0.115,<1",
+    "uvicorn>=0.30,<1",
+    "httpx>=0.27,<1",
+    "SQLAlchemy>=2.0,<3",
+    "psycopg[binary]>=3.2,<4",
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["predictive_maintenance*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[project.scripts]
+prepare-fd001 = "predictive_maintenance.application.prepare_fd001:main"
+eda-fd001 = "predictive_maintenance.application.eda_fd001:main"
+weibull-fd001 = "predictive_maintenance.application.weibull_fd001:main"
+classical-ml-fd001 = "predictive_maintenance.application.classical_ml_fd001:main"
+discrete-hazard-fd001 = "predictive_maintenance.application.discrete_hazard_fd001:main"
+anomaly-detection-fd001 = "predictive_maintenance.application.anomaly_detection_fd001:main"
+fusion-fd001 = "predictive_maintenance.application.fusion_fd001:main"
+tcn-fd001 = "predictive_maintenance.application.tcn_fd001:main"
+transformer-fd001 = "predictive_maintenance.application.transformer_fd001:main"
+explainability-uncertainty-fd001 = "predictive_maintenance.application.explainability_uncertainty_fd001:main"
+predictive-maintenance-local = "predictive_maintenance.application.local_cli:main"
+predictive-maintenance-api = "predictive_maintenance.api.main:main"
+predictive-maintenance-simulator = "predictive_maintenance.simulator.telemetry_producer:main"
+final-assurance-local = "predictive_maintenance.application.final_assurance:main"

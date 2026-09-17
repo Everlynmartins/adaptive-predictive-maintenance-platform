@@ -1,0 +1,62 @@
+{
+  "artifact_sha256": {
+    "reports/fusion/artifacts/simple_calibrator_h15.joblib": "7d11b6fbaa03baf0afbde7fbc404a779e809471e4cd912ffe536a69a967a4fd1",
+    "reports/fusion/artifacts/simple_calibrator_h30.joblib": "85b35e0ffa9f97d0d6242e87f12aceca2148ff3dcfec97bc8302bb2dc6202fb7",
+    "reports/fusion/artifacts/stacking_calibrator_h15.joblib": "b9339c46d5f756e19fe7a2eb7a1905f99297470b4752ec0309d611a9abebf137",
+    "reports/fusion/artifacts/stacking_calibrator_h30.joblib": "0390cfc6d53a871b2029869a3ae1a3414a06f1973aa933fdbe19f28fc246fb79",
+    "reports/fusion/artifacts/stacking_h15.joblib": "6424c9d753800cc64e22dd4e247a6d3016d41f4cc222e713db389d223052c49a",
+    "reports/fusion/artifacts/stacking_h30.joblib": "80d0da5d3262858f1ffff0284681f647da48f8b514de4fce39d60adc0481246e"
+  },
+  "calibration_selected": {
+    "simple": {
+      "15": "platt",
+      "30": "platt"
+    },
+    "stacking": {
+      "15": "platt",
+      "30": "platt"
+    }
+  },
+  "configuration_sha256": "ef938428eaa8459a6f3ddec594751025548bcf1f60bea77272b5457576c18ba3",
+  "development_input_sha256": {
+    "reports/anomaly_detection/artifacts/train_oof_anomaly_scores.parquet": "4401adbfe9208b154d31abd7a6c202a8a5d65a0ec952afdf45999def7b023cbd",
+    "reports/anomaly_detection/artifacts/validation_anomaly_scores.parquet": "21aca4a8bd7a2f13934c3636f2e8b814c8eb3fe1e421d5e8bc2d35c38b0c1042",
+    "reports/classical_ml/artifacts/train_oof_predictions.parquet": "2da1b61a0902de9de9bae279bea997fa6d3a46488a69b993a93928510708e43b",
+    "reports/classical_ml/artifacts/validation_predictions.parquet": "8b968b391337bd024d152d73cd94ae352bf52b0b4f979088963b32f2c587a70e",
+    "reports/discrete_hazard/artifacts/train_oof_predictions.parquet": "16bd86d6f00778d9d125075825ab5f277dc23308f5b7b92e23f10dbb73e37440",
+    "reports/discrete_hazard/artifacts/validation_predictions.parquet": "f7783af7f8ef86890557d43f5ac2a955681e8b17037c24e9c296660ab7c4d1d6",
+    "reports/weibull/artifacts/validation_predictions.parquet": "b15e630bf377545d4cb39747c30ad1759ee28c1523a4e8243503887085935398"
+  },
+  "horizons": [
+    15,
+    30
+  ],
+  "official_test_read": false,
+  "phase_version": "0.9.0",
+  "policy_sha256": "3eb00fe69a1c4a73413bec640a5158d6d1a935918617875cd7cbd37b821833dd",
+  "post_test_changes_allowed": false,
+  "primary_fusion": "stacking",
+  "selection_complete": true,
+  "state": "frozen",
+  "test_internal_read": false,
+  "thresholds": {
+    "alert": 0.15811159606353034,
+    "alert_horizon": 30,
+    "attention": 0.00656787442092813,
+    "attention_horizon": 30,
+    "critical": 0.20137471216222377,
+    "critical_horizon": 15,
+    "persistence_cycles": 3
+  },
+  "validation_inference_check": {
+    "RUL": true,
+    "anomaly_score": true,
+    "disagreement": true,
+    "label": true,
+    "risk_discrete_hazard": true,
+    "risk_random_forest": true,
+    "risk_weibull": true,
+    "risk_xgboost": true,
+    "simple_raw": true
+  }
+}

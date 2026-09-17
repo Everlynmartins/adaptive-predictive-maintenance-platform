@@ -1,0 +1,1463 @@
+{
+  "model_name": "isolation_forest_anomaly",
+  "model_version": "1.0.0",
+  "training_data_manifest": {
+    "dataset": "FD001",
+    "official_evaluation": {
+      "files_present": {
+        "official_rul": true,
+        "official_test": true
+      },
+      "used": false
+    },
+    "rows": {
+      "test_internal": 2937,
+      "train": 14634,
+      "validation": 3060
+    },
+    "source": {
+      "file": "train_FD001.txt",
+      "sha256": "963b5e22825b34d8b21c69e1aeb4af3e647050eb672ee8834ba4b5d91d2de0f8"
+    },
+    "split": {
+      "seed": 42,
+      "test_fraction": 0.15,
+      "train_fraction": 0.7,
+      "validation_fraction": 0.15
+    },
+    "units": {
+      "test_internal": [
+        4,
+        5,
+        12,
+        14,
+        15,
+        18,
+        29,
+        32,
+        36,
+        55,
+        70,
+        76,
+        82,
+        87,
+        95
+      ],
+      "train": [
+        2,
+        3,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        16,
+        17,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        27,
+        31,
+        33,
+        34,
+        35,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        56,
+        57,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        66,
+        67,
+        68,
+        69,
+        71,
+        73,
+        74,
+        75,
+        77,
+        79,
+        80,
+        81,
+        83,
+        84,
+        86,
+        88,
+        91,
+        92,
+        93,
+        97,
+        99,
+        100
+      ],
+      "validation": [
+        1,
+        26,
+        28,
+        30,
+        54,
+        58,
+        65,
+        72,
+        78,
+        85,
+        89,
+        90,
+        94,
+        96,
+        98
+      ]
+    }
+  },
+  "configuration": {
+    "model": {
+      "model_version": "1.0.0",
+      "random_seed": 4401,
+      "n_estimators": 200,
+      "max_samples": 256,
+      "contamination": "auto"
+    },
+    "healthy_region": {
+      "minimum_rul_exclusive": 60
+    },
+    "features": {
+      "windows": [
+        5,
+        10,
+        20
+      ]
+    },
+    "cross_validation": {
+      "folds": 5,
+      "seed": 4402
+    },
+    "analysis": {
+      "near_event_rul_inclusive": 30,
+      "diagnostic_healthy_quantile": 0.95,
+      "representative_units": 6
+    }
+  },
+  "parameters": {
+    "healthy_rows": 10364,
+    "healthy_units": 70,
+    "raw_anomaly_score_min": 0.37879085085394953,
+    "raw_anomaly_score_max": 0.6266761174607942,
+    "normalization": "empirical CDF of -score_samples on healthy fitting rows",
+    "contamination": "auto"
+  },
+  "features": [
+    "age_cycle",
+    "setting_1__current",
+    "setting_1__delta",
+    "setting_1__relative_delta",
+    "setting_1__cumulative_abs_change",
+    "setting_1__mean_w5",
+    "setting_1__std_w5",
+    "setting_1__min_w5",
+    "setting_1__max_w5",
+    "setting_1__slope_w5",
+    "setting_1__mean_w10",
+    "setting_1__std_w10",
+    "setting_1__min_w10",
+    "setting_1__max_w10",
+    "setting_1__slope_w10",
+    "setting_1__mean_w20",
+    "setting_1__std_w20",
+    "setting_1__min_w20",
+    "setting_1__max_w20",
+    "setting_1__slope_w20",
+    "setting_2__current",
+    "setting_2__delta",
+    "setting_2__relative_delta",
+    "setting_2__cumulative_abs_change",
+    "setting_2__mean_w5",
+    "setting_2__std_w5",
+    "setting_2__min_w5",
+    "setting_2__max_w5",
+    "setting_2__slope_w5",
+    "setting_2__mean_w10",
+    "setting_2__std_w10",
+    "setting_2__min_w10",
+    "setting_2__max_w10",
+    "setting_2__slope_w10",
+    "setting_2__mean_w20",
+    "setting_2__std_w20",
+    "setting_2__min_w20",
+    "setting_2__max_w20",
+    "setting_2__slope_w20",
+    "sensor_2__current",
+    "sensor_2__delta",
+    "sensor_2__relative_delta",
+    "sensor_2__cumulative_abs_change",
+    "sensor_2__mean_w5",
+    "sensor_2__std_w5",
+    "sensor_2__min_w5",
+    "sensor_2__max_w5",
+    "sensor_2__slope_w5",
+    "sensor_2__mean_w10",
+    "sensor_2__std_w10",
+    "sensor_2__min_w10",
+    "sensor_2__max_w10",
+    "sensor_2__slope_w10",
+    "sensor_2__mean_w20",
+    "sensor_2__std_w20",
+    "sensor_2__min_w20",
+    "sensor_2__max_w20",
+    "sensor_2__slope_w20",
+    "sensor_3__current",
+    "sensor_3__delta",
+    "sensor_3__relative_delta",
+    "sensor_3__cumulative_abs_change",
+    "sensor_3__mean_w5",
+    "sensor_3__std_w5",
+    "sensor_3__min_w5",
+    "sensor_3__max_w5",
+    "sensor_3__slope_w5",
+    "sensor_3__mean_w10",
+    "sensor_3__std_w10",
+    "sensor_3__min_w10",
+    "sensor_3__max_w10",
+    "sensor_3__slope_w10",
+    "sensor_3__mean_w20",
+    "sensor_3__std_w20",
+    "sensor_3__min_w20",
+    "sensor_3__max_w20",
+    "sensor_3__slope_w20",
+    "sensor_4__current",
+    "sensor_4__delta",
+    "sensor_4__relative_delta",
+    "sensor_4__cumulative_abs_change",
+    "sensor_4__mean_w5",
+    "sensor_4__std_w5",
+    "sensor_4__min_w5",
+    "sensor_4__max_w5",
+    "sensor_4__slope_w5",
+    "sensor_4__mean_w10",
+    "sensor_4__std_w10",
+    "sensor_4__min_w10",
+    "sensor_4__max_w10",
+    "sensor_4__slope_w10",
+    "sensor_4__mean_w20",
+    "sensor_4__std_w20",
+    "sensor_4__min_w20",
+    "sensor_4__max_w20",
+    "sensor_4__slope_w20",
+    "sensor_6__current",
+    "sensor_6__delta",
+    "sensor_6__relative_delta",
+    "sensor_6__cumulative_abs_change",
+    "sensor_6__mean_w5",
+    "sensor_6__std_w5",
+    "sensor_6__min_w5",
+    "sensor_6__max_w5",
+    "sensor_6__slope_w5",
+    "sensor_6__mean_w10",
+    "sensor_6__std_w10",
+    "sensor_6__min_w10",
+    "sensor_6__max_w10",
+    "sensor_6__slope_w10",
+    "sensor_6__mean_w20",
+    "sensor_6__std_w20",
+    "sensor_6__min_w20",
+    "sensor_6__max_w20",
+    "sensor_6__slope_w20",
+    "sensor_7__current",
+    "sensor_7__delta",
+    "sensor_7__relative_delta",
+    "sensor_7__cumulative_abs_change",
+    "sensor_7__mean_w5",
+    "sensor_7__std_w5",
+    "sensor_7__min_w5",
+    "sensor_7__max_w5",
+    "sensor_7__slope_w5",
+    "sensor_7__mean_w10",
+    "sensor_7__std_w10",
+    "sensor_7__min_w10",
+    "sensor_7__max_w10",
+    "sensor_7__slope_w10",
+    "sensor_7__mean_w20",
+    "sensor_7__std_w20",
+    "sensor_7__min_w20",
+    "sensor_7__max_w20",
+    "sensor_7__slope_w20",
+    "sensor_8__current",
+    "sensor_8__delta",
+    "sensor_8__relative_delta",
+    "sensor_8__cumulative_abs_change",
+    "sensor_8__mean_w5",
+    "sensor_8__std_w5",
+    "sensor_8__min_w5",
+    "sensor_8__max_w5",
+    "sensor_8__slope_w5",
+    "sensor_8__mean_w10",
+    "sensor_8__std_w10",
+    "sensor_8__min_w10",
+    "sensor_8__max_w10",
+    "sensor_8__slope_w10",
+    "sensor_8__mean_w20",
+    "sensor_8__std_w20",
+    "sensor_8__min_w20",
+    "sensor_8__max_w20",
+    "sensor_8__slope_w20",
+    "sensor_9__current",
+    "sensor_9__delta",
+    "sensor_9__relative_delta",
+    "sensor_9__cumulative_abs_change",
+    "sensor_9__mean_w5",
+    "sensor_9__std_w5",
+    "sensor_9__min_w5",
+    "sensor_9__max_w5",
+    "sensor_9__slope_w5",
+    "sensor_9__mean_w10",
+    "sensor_9__std_w10",
+    "sensor_9__min_w10",
+    "sensor_9__max_w10",
+    "sensor_9__slope_w10",
+    "sensor_9__mean_w20",
+    "sensor_9__std_w20",
+    "sensor_9__min_w20",
+    "sensor_9__max_w20",
+    "sensor_9__slope_w20",
+    "sensor_11__current",
+    "sensor_11__delta",
+    "sensor_11__relative_delta",
+    "sensor_11__cumulative_abs_change",
+    "sensor_11__mean_w5",
+    "sensor_11__std_w5",
+    "sensor_11__min_w5",
+    "sensor_11__max_w5",
+    "sensor_11__slope_w5",
+    "sensor_11__mean_w10",
+    "sensor_11__std_w10",
+    "sensor_11__min_w10",
+    "sensor_11__max_w10",
+    "sensor_11__slope_w10",
+    "sensor_11__mean_w20",
+    "sensor_11__std_w20",
+    "sensor_11__min_w20",
+    "sensor_11__max_w20",
+    "sensor_11__slope_w20",
+    "sensor_12__current",
+    "sensor_12__delta",
+    "sensor_12__relative_delta",
+    "sensor_12__cumulative_abs_change",
+    "sensor_12__mean_w5",
+    "sensor_12__std_w5",
+    "sensor_12__min_w5",
+    "sensor_12__max_w5",
+    "sensor_12__slope_w5",
+    "sensor_12__mean_w10",
+    "sensor_12__std_w10",
+    "sensor_12__min_w10",
+    "sensor_12__max_w10",
+    "sensor_12__slope_w10",
+    "sensor_12__mean_w20",
+    "sensor_12__std_w20",
+    "sensor_12__min_w20",
+    "sensor_12__max_w20",
+    "sensor_12__slope_w20",
+    "sensor_13__current",
+    "sensor_13__delta",
+    "sensor_13__relative_delta",
+    "sensor_13__cumulative_abs_change",
+    "sensor_13__mean_w5",
+    "sensor_13__std_w5",
+    "sensor_13__min_w5",
+    "sensor_13__max_w5",
+    "sensor_13__slope_w5",
+    "sensor_13__mean_w10",
+    "sensor_13__std_w10",
+    "sensor_13__min_w10",
+    "sensor_13__max_w10",
+    "sensor_13__slope_w10",
+    "sensor_13__mean_w20",
+    "sensor_13__std_w20",
+    "sensor_13__min_w20",
+    "sensor_13__max_w20",
+    "sensor_13__slope_w20",
+    "sensor_14__current",
+    "sensor_14__delta",
+    "sensor_14__relative_delta",
+    "sensor_14__cumulative_abs_change",
+    "sensor_14__mean_w5",
+    "sensor_14__std_w5",
+    "sensor_14__min_w5",
+    "sensor_14__max_w5",
+    "sensor_14__slope_w5",
+    "sensor_14__mean_w10",
+    "sensor_14__std_w10",
+    "sensor_14__min_w10",
+    "sensor_14__max_w10",
+    "sensor_14__slope_w10",
+    "sensor_14__mean_w20",
+    "sensor_14__std_w20",
+    "sensor_14__min_w20",
+    "sensor_14__max_w20",
+    "sensor_14__slope_w20",
+    "sensor_15__current",
+    "sensor_15__delta",
+    "sensor_15__relative_delta",
+    "sensor_15__cumulative_abs_change",
+    "sensor_15__mean_w5",
+    "sensor_15__std_w5",
+    "sensor_15__min_w5",
+    "sensor_15__max_w5",
+    "sensor_15__slope_w5",
+    "sensor_15__mean_w10",
+    "sensor_15__std_w10",
+    "sensor_15__min_w10",
+    "sensor_15__max_w10",
+    "sensor_15__slope_w10",
+    "sensor_15__mean_w20",
+    "sensor_15__std_w20",
+    "sensor_15__min_w20",
+    "sensor_15__max_w20",
+    "sensor_15__slope_w20",
+    "sensor_17__current",
+    "sensor_17__delta",
+    "sensor_17__relative_delta",
+    "sensor_17__cumulative_abs_change",
+    "sensor_17__mean_w5",
+    "sensor_17__std_w5",
+    "sensor_17__min_w5",
+    "sensor_17__max_w5",
+    "sensor_17__slope_w5",
+    "sensor_17__mean_w10",
+    "sensor_17__std_w10",
+    "sensor_17__min_w10",
+    "sensor_17__max_w10",
+    "sensor_17__slope_w10",
+    "sensor_17__mean_w20",
+    "sensor_17__std_w20",
+    "sensor_17__min_w20",
+    "sensor_17__max_w20",
+    "sensor_17__slope_w20",
+    "sensor_20__current",
+    "sensor_20__delta",
+    "sensor_20__relative_delta",
+    "sensor_20__cumulative_abs_change",
+    "sensor_20__mean_w5",
+    "sensor_20__std_w5",
+    "sensor_20__min_w5",
+    "sensor_20__max_w5",
+    "sensor_20__slope_w5",
+    "sensor_20__mean_w10",
+    "sensor_20__std_w10",
+    "sensor_20__min_w10",
+    "sensor_20__max_w10",
+    "sensor_20__slope_w10",
+    "sensor_20__mean_w20",
+    "sensor_20__std_w20",
+    "sensor_20__min_w20",
+    "sensor_20__max_w20",
+    "sensor_20__slope_w20",
+    "sensor_21__current",
+    "sensor_21__delta",
+    "sensor_21__relative_delta",
+    "sensor_21__cumulative_abs_change",
+    "sensor_21__mean_w5",
+    "sensor_21__std_w5",
+    "sensor_21__min_w5",
+    "sensor_21__max_w5",
+    "sensor_21__slope_w5",
+    "sensor_21__mean_w10",
+    "sensor_21__std_w10",
+    "sensor_21__min_w10",
+    "sensor_21__max_w10",
+    "sensor_21__slope_w10",
+    "sensor_21__mean_w20",
+    "sensor_21__std_w20",
+    "sensor_21__min_w20",
+    "sensor_21__max_w20",
+    "sensor_21__slope_w20"
+  ],
+  "input_contract": "324 train-fitted causal features at t; no RUL, targets, final time or future data",
+  "output_contract": "anomaly_score = empirical CDF of -IsolationForest.score_samples on healthy train rows; [0,1], higher is more anomalous; not risk probability",
+  "healthy_region": {
+    "selection": "RUL > 60",
+    "used_as": "train-only detector fitting selection",
+    "experimental": true
+  },
+  "assumptions": [
+    "ASM019",
+    "ASM020",
+    "ASM021"
+  ],
+  "limitations": [
+    "No anomaly ground truth",
+    "Diagnostic quantile is not an alert threshold",
+    "Validation reused for development analysis",
+    "Not independent from risk models"
+  ],
+  "shared_dependencies": [
+    "FD001 train data",
+    "causal sensors/features",
+    "feature selection/imputation",
+    "Python/scikit-learn/joblib runtime",
+    "unit folds and validation"
+  ],
+  "dependencies": {
+    "python": "3.11.16",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "joblib": "1.6.0"
+  },
+  "input_hashes": {
+    "data\\processed\\fd001\\train.parquet": "73167cca2c7899c84e286abf8ce5d7362b9f075d3782b5f3e53020fd8604fff1",
+    "data\\processed\\fd001\\validation.parquet": "d3f200b2e9832374b10fa961d968bbb3c3393d179ac973e4e087e1801c971a9e",
+    "data\\processed\\fd001\\split_manifest.json": "255eb98adbf71c3dc096c6e63331f28a7c24838915fe2a626d28775cca3aa0d1",
+    "configs\\anomaly_detection.toml": "7ca2a969bd46cb07a2d74bfd056d640dc7aa95b08c1ca121afd63b104cdb3a86"
+  },
+  "artifact_hash": {
+    "path": "reports\\anomaly_detection\\artifacts\\isolation_forest.joblib",
+    "value": "7fe4709fefedfab5170204d1846d4e7cc0be1ecb08ab40644335cfedaf81e323"
+  },
+  "metrics": {
+    "train_oof": {
+      "healthy_region": {
+        "rows": 10364,
+        "units": 70,
+        "mean": 0.5179063283348816,
+        "median": 0.5261844893327705,
+        "q05": 0.051667431918797566,
+        "q95": 0.9535342904991211,
+        "min": 0.0,
+        "max": 0.9997601918465228
+      },
+      "near_event_region": {
+        "rows": 2100,
+        "units": 70,
+        "mean": 0.9882190680330725,
+        "median": 0.9938680402256561,
+        "q05": 0.961493822833124,
+        "q95": 0.9997601918465228,
+        "min": 0.6737174811573061,
+        "max": 1.0
+      },
+      "all_operational": {
+        "rows": 14564,
+        "units": 70,
+        "mean": 0.6325085044030134,
+        "median": 0.6978557385375935,
+        "q05": 0.06898922242325846,
+        "q95": 0.9973007862926887,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "analysis_reference": {
+        "healthy_score_quantile": 0.95,
+        "anomaly_score_cutoff": 0.95,
+        "meaning": "diagnostic reference only; not an operational alert threshold"
+      },
+      "false_positive_reference": {
+        "count": 558,
+        "fraction_of_healthy_rows": 0.05384021613276727
+      },
+      "by_unit": [
+        {
+          "unit_id": 2,
+          "n_cycles": 286,
+          "mean_anomaly_score": 0.836129345976173,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 286
+        },
+        {
+          "unit_id": 3,
+          "n_cycles": 178,
+          "mean_anomaly_score": 0.6853379391734074,
+          "max_anomaly_score": 0.9991490396304401,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 178
+        },
+        {
+          "unit_id": 6,
+          "n_cycles": 187,
+          "mean_anomaly_score": 0.7519221150388439,
+          "max_anomaly_score": 0.9973007862926887,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 187
+        },
+        {
+          "unit_id": 7,
+          "n_cycles": 258,
+          "mean_anomaly_score": 0.7680289571541926,
+          "max_anomaly_score": 0.9991490396304401,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 258
+        },
+        {
+          "unit_id": 8,
+          "n_cycles": 149,
+          "mean_anomaly_score": 0.8394355656414466,
+          "max_anomaly_score": 0.9991606714628297,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 149
+        },
+        {
+          "unit_id": 9,
+          "n_cycles": 200,
+          "mean_anomaly_score": 0.8802440519990189,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 200
+        },
+        {
+          "unit_id": 10,
+          "n_cycles": 221,
+          "mean_anomaly_score": 0.7024772585189326,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 221
+        },
+        {
+          "unit_id": 11,
+          "n_cycles": 239,
+          "mean_anomaly_score": 0.6513495479766813,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 239
+        },
+        {
+          "unit_id": 13,
+          "n_cycles": 162,
+          "mean_anomaly_score": 0.4724569021642033,
+          "max_anomaly_score": 0.9997547216090262,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 162
+        },
+        {
+          "unit_id": 16,
+          "n_cycles": 208,
+          "mean_anomaly_score": 0.7383556112177536,
+          "max_anomaly_score": 0.9952525867315886,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 208
+        },
+        {
+          "unit_id": 17,
+          "n_cycles": 275,
+          "mean_anomaly_score": 0.7237202042500056,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 275
+        },
+        {
+          "unit_id": 19,
+          "n_cycles": 157,
+          "mean_anomaly_score": 0.7769028994405467,
+          "max_anomaly_score": 0.9976698552857494,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 157
+        },
+        {
+          "unit_id": 20,
+          "n_cycles": 233,
+          "mean_anomaly_score": 0.49701668216238887,
+          "max_anomaly_score": 0.9980549477267202,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 233
+        },
+        {
+          "unit_id": 21,
+          "n_cycles": 194,
+          "mean_anomaly_score": 0.5347764300109491,
+          "max_anomaly_score": 0.9998773608045132,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 194
+        },
+        {
+          "unit_id": 22,
+          "n_cycles": 201,
+          "mean_anomaly_score": 0.8544370473770238,
+          "max_anomaly_score": 0.9989208633093525,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 201
+        },
+        {
+          "unit_id": 23,
+          "n_cycles": 167,
+          "mean_anomaly_score": 0.5393121243817902,
+          "max_anomaly_score": 0.9929397443700548,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 167
+        },
+        {
+          "unit_id": 24,
+          "n_cycles": 146,
+          "mean_anomaly_score": 0.428480482546746,
+          "max_anomaly_score": 0.9960098579978875,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 146
+        },
+        {
+          "unit_id": 25,
+          "n_cycles": 229,
+          "mean_anomaly_score": 0.5438900509505724,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 229
+        },
+        {
+          "unit_id": 27,
+          "n_cycles": 155,
+          "mean_anomaly_score": 0.5244167161964179,
+          "max_anomaly_score": 0.9995305715291632,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 155
+        },
+        {
+          "unit_id": 31,
+          "n_cycles": 233,
+          "mean_anomaly_score": 0.7155397198153697,
+          "max_anomaly_score": 0.9992696287279367,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 233
+        },
+        {
+          "unit_id": 33,
+          "n_cycles": 199,
+          "mean_anomaly_score": 0.7444397887183941,
+          "max_anomaly_score": 0.9993913572732805,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 199
+        },
+        {
+          "unit_id": 34,
+          "n_cycles": 194,
+          "mean_anomaly_score": 0.5177078711954302,
+          "max_anomaly_score": 0.9991490396304401,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 194
+        },
+        {
+          "unit_id": 35,
+          "n_cycles": 180,
+          "mean_anomaly_score": 0.391589233786434,
+          "max_anomaly_score": 0.9996348143639684,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 180
+        },
+        {
+          "unit_id": 37,
+          "n_cycles": 169,
+          "mean_anomaly_score": 0.617170503314161,
+          "max_anomaly_score": 0.9975472160902624,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 169
+        },
+        {
+          "unit_id": 38,
+          "n_cycles": 193,
+          "mean_anomaly_score": 0.5557449155568772,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 193
+        },
+        {
+          "unit_id": 39,
+          "n_cycles": 127,
+          "mean_anomaly_score": 0.7056147526213605,
+          "max_anomaly_score": 0.9977702147635255,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 127
+        },
+        {
+          "unit_id": 40,
+          "n_cycles": 187,
+          "mean_anomaly_score": 0.7011030428881563,
+          "max_anomaly_score": 0.9998782714546561,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 187
+        },
+        {
+          "unit_id": 41,
+          "n_cycles": 215,
+          "mean_anomaly_score": 0.6784971738768514,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 215
+        },
+        {
+          "unit_id": 42,
+          "n_cycles": 195,
+          "mean_anomaly_score": 0.41350919264588326,
+          "max_anomaly_score": 0.9985611510791367,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 195
+        },
+        {
+          "unit_id": 43,
+          "n_cycles": 206,
+          "mean_anomaly_score": 0.6465581544664206,
+          "max_anomaly_score": 0.9975686846584002,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 206
+        },
+        {
+          "unit_id": 44,
+          "n_cycles": 191,
+          "mean_anomaly_score": 0.6864691573010109,
+          "max_anomaly_score": 0.9975686846584002,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 191
+        },
+        {
+          "unit_id": 45,
+          "n_cycles": 157,
+          "mean_anomaly_score": 0.7812415036123966,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 157
+        },
+        {
+          "unit_id": 46,
+          "n_cycles": 255,
+          "mean_anomaly_score": 0.6373262683040349,
+          "max_anomaly_score": 0.9990261716372489,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 255
+        },
+        {
+          "unit_id": 47,
+          "n_cycles": 213,
+          "mean_anomaly_score": 0.7443284280262019,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 213
+        },
+        {
+          "unit_id": 48,
+          "n_cycles": 230,
+          "mean_anomaly_score": 0.7818601613405244,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 230
+        },
+        {
+          "unit_id": 49,
+          "n_cycles": 214,
+          "mean_anomaly_score": 0.5981308411214953,
+          "max_anomaly_score": 0.9979333819596402,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 214
+        },
+        {
+          "unit_id": 50,
+          "n_cycles": 197,
+          "mean_anomaly_score": 0.4763860407958972,
+          "max_anomaly_score": 0.9997547216090262,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 197
+        },
+        {
+          "unit_id": 51,
+          "n_cycles": 212,
+          "mean_anomaly_score": 0.8719792053727481,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 212
+        },
+        {
+          "unit_id": 52,
+          "n_cycles": 212,
+          "mean_anomaly_score": 0.5435669957099422,
+          "max_anomaly_score": 0.9997547216090262,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 212
+        },
+        {
+          "unit_id": 53,
+          "n_cycles": 194,
+          "mean_anomaly_score": 0.4828336734358446,
+          "max_anomaly_score": 0.9998773608045132,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 194
+        },
+        {
+          "unit_id": 56,
+          "n_cycles": 274,
+          "mean_anomaly_score": 0.6337674386038614,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 274
+        },
+        {
+          "unit_id": 57,
+          "n_cycles": 136,
+          "mean_anomaly_score": 0.5977192116817551,
+          "max_anomaly_score": 0.9975686846584002,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 136
+        },
+        {
+          "unit_id": 59,
+          "n_cycles": 230,
+          "mean_anomaly_score": 0.6652643102908976,
+          "max_anomaly_score": 0.9996402877697842,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 230
+        },
+        {
+          "unit_id": 60,
+          "n_cycles": 171,
+          "mean_anomaly_score": 0.5024349268382968,
+          "max_anomaly_score": 0.9998782714546561,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 171
+        },
+        {
+          "unit_id": 61,
+          "n_cycles": 184,
+          "mean_anomaly_score": 0.7675047456036515,
+          "max_anomaly_score": 0.9986509688496443,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 184
+        },
+        {
+          "unit_id": 62,
+          "n_cycles": 179,
+          "mean_anomaly_score": 0.6498253935267246,
+          "max_anomaly_score": 0.9975686846584002,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 179
+        },
+        {
+          "unit_id": 63,
+          "n_cycles": 173,
+          "mean_anomaly_score": 0.49191444532235484,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 173
+        },
+        {
+          "unit_id": 64,
+          "n_cycles": 282,
+          "mean_anomaly_score": 0.46974267163062305,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 282
+        },
+        {
+          "unit_id": 66,
+          "n_cycles": 201,
+          "mean_anomaly_score": 0.7472788219583761,
+          "max_anomaly_score": 0.9962264150943396,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 201
+        },
+        {
+          "unit_id": 67,
+          "n_cycles": 312,
+          "mean_anomaly_score": 0.5247744900666386,
+          "max_anomaly_score": 0.9992696287279367,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 312
+        },
+        {
+          "unit_id": 68,
+          "n_cycles": 198,
+          "mean_anomaly_score": 0.5547852228923441,
+          "max_anomaly_score": 0.9998782714546561,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 198
+        },
+        {
+          "unit_id": 69,
+          "n_cycles": 361,
+          "mean_anomaly_score": 0.5325924702931178,
+          "max_anomaly_score": 0.9974245768947756,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 361
+        },
+        {
+          "unit_id": 71,
+          "n_cycles": 207,
+          "mean_anomaly_score": 0.49661223450786823,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 207
+        },
+        {
+          "unit_id": 73,
+          "n_cycles": 212,
+          "mean_anomaly_score": 0.8548565121412802,
+          "max_anomaly_score": 0.9984056904586706,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 212
+        },
+        {
+          "unit_id": 74,
+          "n_cycles": 165,
+          "mean_anomaly_score": 0.45472895840223615,
+          "max_anomaly_score": 0.9967140007041427,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 165
+        },
+        {
+          "unit_id": 75,
+          "n_cycles": 228,
+          "mean_anomaly_score": 0.6734274060074105,
+          "max_anomaly_score": 0.9981740718198417,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 228
+        },
+        {
+          "unit_id": 77,
+          "n_cycles": 153,
+          "mean_anomaly_score": 0.6361522546668548,
+          "max_anomaly_score": 0.9988009592326139,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 153
+        },
+        {
+          "unit_id": 79,
+          "n_cycles": 198,
+          "mean_anomaly_score": 0.7633716204102785,
+          "max_anomaly_score": 0.9993921711646,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 198
+        },
+        {
+          "unit_id": 80,
+          "n_cycles": 184,
+          "mean_anomaly_score": 0.5798137576895005,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 184
+        },
+        {
+          "unit_id": 81,
+          "n_cycles": 239,
+          "mean_anomaly_score": 0.49320089819932933,
+          "max_anomaly_score": 0.999413214411454,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 239
+        },
+        {
+          "unit_id": 83,
+          "n_cycles": 292,
+          "mean_anomaly_score": 0.8311168396897242,
+          "max_anomaly_score": 0.99975686846584,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 292
+        },
+        {
+          "unit_id": 84,
+          "n_cycles": 266,
+          "mean_anomaly_score": 0.7381362579109645,
+          "max_anomaly_score": 0.9997601918465228,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 266
+        },
+        {
+          "unit_id": 86,
+          "n_cycles": 277,
+          "mean_anomaly_score": 0.4828550156264879,
+          "max_anomaly_score": 0.9997601918465228,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 277
+        },
+        {
+          "unit_id": 88,
+          "n_cycles": 212,
+          "mean_anomaly_score": 0.6146729785982534,
+          "max_anomaly_score": 1.0,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 212
+        },
+        {
+          "unit_id": 91,
+          "n_cycles": 134,
+          "mean_anomaly_score": 0.8257203012049247,
+          "max_anomaly_score": 0.9947189297030865,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 134
+        },
+        {
+          "unit_id": 92,
+          "n_cycles": 340,
+          "mean_anomaly_score": 0.533884488305992,
+          "max_anomaly_score": 0.9997547216090262,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 340
+        },
+        {
+          "unit_id": 93,
+          "n_cycles": 154,
+          "mean_anomaly_score": 0.5259312030894765,
+          "max_anomaly_score": 0.9986810551558754,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 154
+        },
+        {
+          "unit_id": 97,
+          "n_cycles": 201,
+          "mean_anomaly_score": 0.6241972728141446,
+          "max_anomaly_score": 0.99951373693168,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 201
+        },
+        {
+          "unit_id": 99,
+          "n_cycles": 184,
+          "mean_anomaly_score": 0.46597855426235946,
+          "max_anomaly_score": 0.9995305715291632,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 184
+        },
+        {
+          "unit_id": 100,
+          "n_cycles": 199,
+          "mean_anomaly_score": 0.46683894770177603,
+          "max_anomaly_score": 0.9977702147635255,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 199
+        }
+      ],
+      "early_indications": [
+        {
+          "unit_id": 69,
+          "cycle": 1,
+          "RUL": 361,
+          "anomaly_score": 0.9873681628648516
+        },
+        {
+          "unit_id": 92,
+          "cycle": 1,
+          "RUL": 340,
+          "anomaly_score": 0.9895756683836154
+        },
+        {
+          "unit_id": 67,
+          "cycle": 1,
+          "RUL": 312,
+          "anomaly_score": 0.9919659160073037
+        },
+        {
+          "unit_id": 83,
+          "cycle": 1,
+          "RUL": 292,
+          "anomaly_score": 0.9986627765621201
+        },
+        {
+          "unit_id": 2,
+          "cycle": 1,
+          "RUL": 286,
+          "anomaly_score": 0.9992706053975201
+        },
+        {
+          "unit_id": 64,
+          "cycle": 1,
+          "RUL": 282,
+          "anomaly_score": 0.9906114305832648
+        }
+      ],
+      "healthy_region_high_scores": [
+        {
+          "unit_id": 11,
+          "cycle": 2,
+          "RUL": 238,
+          "anomaly_score": 0.9997601918465228
+        },
+        {
+          "unit_id": 2,
+          "cycle": 2,
+          "RUL": 285,
+          "anomaly_score": 0.99975686846584
+        },
+        {
+          "unit_id": 86,
+          "cycle": 2,
+          "RUL": 276,
+          "anomaly_score": 0.9996402877697842
+        },
+        {
+          "unit_id": 79,
+          "cycle": 1,
+          "RUL": 198,
+          "anomaly_score": 0.9993921711646
+        },
+        {
+          "unit_id": 33,
+          "cycle": 2,
+          "RUL": 198,
+          "anomaly_score": 0.9993913572732805
+        },
+        {
+          "unit_id": 2,
+          "cycle": 1,
+          "RUL": 286,
+          "anomaly_score": 0.9992706053975201
+        }
+      ]
+    },
+    "validation": {
+      "healthy_region": {
+        "rows": 2145,
+        "units": 15,
+        "mean": 0.5273800559404573,
+        "median": 0.5219027402547279,
+        "q05": 0.11387495175607873,
+        "q95": 0.9539752991123118,
+        "min": 0.0,
+        "max": 0.9999035121574682
+      },
+      "near_event_region": {
+        "rows": 450,
+        "units": 15,
+        "mean": 0.9733341910030446,
+        "median": 0.9892416055576998,
+        "q05": 0.8707448861443459,
+        "q95": 0.9989917020455422,
+        "min": 0.6526437668853724,
+        "max": 0.9999035121574682
+      },
+      "all_operational": {
+        "rows": 3045,
+        "units": 15,
+        "mean": 0.6103747087144524,
+        "median": 0.6211887302199923,
+        "q05": 0.12553068313392515,
+        "q95": 0.9947896565032806,
+        "min": 0.0,
+        "max": 0.9999035121574682
+      },
+      "analysis_reference": {
+        "healthy_score_quantile": 0.95,
+        "anomaly_score_cutoff": 0.95,
+        "meaning": "diagnostic reference only; not an operational alert threshold"
+      },
+      "false_positive_reference": {
+        "count": 120,
+        "fraction_of_healthy_rows": 0.055944055944055944
+      },
+      "by_unit": [
+        {
+          "unit_id": 1,
+          "n_cycles": 191,
+          "mean_anomaly_score": 0.4990154198686149,
+          "max_anomaly_score": 0.998166730991895,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 191
+        },
+        {
+          "unit_id": 26,
+          "n_cycles": 198,
+          "mean_anomaly_score": 0.6023185346323131,
+          "max_anomaly_score": 0.9986491702045542,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 198
+        },
+        {
+          "unit_id": 28,
+          "n_cycles": 164,
+          "mean_anomaly_score": 0.7335953017480773,
+          "max_anomaly_score": 0.9991316094172135,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 164
+        },
+        {
+          "unit_id": 30,
+          "n_cycles": 193,
+          "mean_anomaly_score": 0.6743010380692033,
+          "max_anomaly_score": 0.9979737553068313,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 193
+        },
+        {
+          "unit_id": 54,
+          "n_cycles": 256,
+          "mean_anomaly_score": 0.7700713557747974,
+          "max_anomaly_score": 0.9999035121574682,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 256
+        },
+        {
+          "unit_id": 58,
+          "n_cycles": 146,
+          "mean_anomaly_score": 0.442381557868914,
+          "max_anomaly_score": 0.9964299498263219,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 146
+        },
+        {
+          "unit_id": 65,
+          "n_cycles": 152,
+          "mean_anomaly_score": 0.5373522212517012,
+          "max_anomaly_score": 0.9973948282516403,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 152
+        },
+        {
+          "unit_id": 72,
+          "n_cycles": 212,
+          "mean_anomaly_score": 0.6215082324155459,
+          "max_anomaly_score": 0.998166730991895,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 212
+        },
+        {
+          "unit_id": 78,
+          "n_cycles": 230,
+          "mean_anomaly_score": 0.7467290621381704,
+          "max_anomaly_score": 0.9999035121574682,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 230
+        },
+        {
+          "unit_id": 85,
+          "n_cycles": 187,
+          "mean_anomaly_score": 0.4800146331294877,
+          "max_anomaly_score": 0.9919915090698572,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 187
+        },
+        {
+          "unit_id": 89,
+          "n_cycles": 216,
+          "mean_anomaly_score": 0.5168460625813,
+          "max_anomaly_score": 0.9985526823620224,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 216
+        },
+        {
+          "unit_id": 90,
+          "n_cycles": 153,
+          "mean_anomaly_score": 0.5579923465591048,
+          "max_anomaly_score": 0.9965264376688537,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 153
+        },
+        {
+          "unit_id": 94,
+          "n_cycles": 257,
+          "mean_anomaly_score": 0.6677123896396836,
+          "max_anomaly_score": 0.9999035121574682,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 257
+        },
+        {
+          "unit_id": 96,
+          "n_cycles": 335,
+          "mean_anomaly_score": 0.5742023191645017,
+          "max_anomaly_score": 0.998842145889618,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 335
+        },
+        {
+          "unit_id": 98,
+          "n_cycles": 155,
+          "mean_anomaly_score": 0.6188717769948084,
+          "max_anomaly_score": 0.9956580470860672,
+          "first_diagnostic_cycle": 1,
+          "lead_cycles_at_first_diagnostic": 155
+        }
+      ],
+      "early_indications": [
+        {
+          "unit_id": 96,
+          "cycle": 1,
+          "RUL": 335,
+          "anomaly_score": 0.9958510227711308
+        },
+        {
+          "unit_id": 94,
+          "cycle": 1,
+          "RUL": 257,
+          "anomaly_score": 0.9936318023928985
+        },
+        {
+          "unit_id": 54,
+          "cycle": 1,
+          "RUL": 256,
+          "anomaly_score": 0.9942107294480895
+        },
+        {
+          "unit_id": 78,
+          "cycle": 1,
+          "RUL": 230,
+          "anomaly_score": 0.9989386337321497
+        },
+        {
+          "unit_id": 89,
+          "cycle": 1,
+          "RUL": 216,
+          "anomaly_score": 0.998166730991895
+        },
+        {
+          "unit_id": 72,
+          "cycle": 1,
+          "RUL": 212,
+          "anomaly_score": 0.9914125820146662
+        }
+      ],
+      "healthy_region_high_scores": [
+        {
+          "unit_id": 78,
+          "cycle": 2,
+          "RUL": 229,
+          "anomaly_score": 0.9999035121574682
+        },
+        {
+          "unit_id": 78,
+          "cycle": 1,
+          "RUL": 230,
+          "anomaly_score": 0.9989386337321497
+        },
+        {
+          "unit_id": 28,
+          "cycle": 2,
+          "RUL": 163,
+          "anomaly_score": 0.998166730991895
+        },
+        {
+          "unit_id": 54,
+          "cycle": 2,
+          "RUL": 255,
+          "anomaly_score": 0.998166730991895
+        },
+        {
+          "unit_id": 78,
+          "cycle": 3,
+          "RUL": 228,
+          "anomaly_score": 0.998166730991895
+        },
+        {
+          "unit_id": 89,
+          "cycle": 1,
+          "RUL": 216,
+          "anomaly_score": 0.998166730991895
+        }
+      ]
+    }
+  },
+  "test_internal_read": false,
+  "official_test_read": false
+}
