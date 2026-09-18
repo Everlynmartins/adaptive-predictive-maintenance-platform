@@ -2,6 +2,16 @@
 
 ## [0.16.0] - 2026-09-16
 
+- 2026-09-17 — Added a focused local Probability by model H30 animation
+  and final-cycle poster, captured from unit 1 at cycles 160–191. Real sampled
+  frames use 5x visual timing; no scientific curves or values are reconstructed.
+  Added the demonstration to the README; application and artifacts unchanged.
+
+- 2026-09-17 — Added a genuine local dashboard GIF demonstrating playback,
+  changing indicators and existing API-backed operational history. The README
+  distinguishes this interface demonstration from separate AWS deployment
+  evidence. No scientific artifacts or application behavior changed.
+
 - Added reviewed, already-redacted AWS Console screenshots for ECS and RDS,
   with source filenames and SHA256 hashes in the assets manifest. The README
   now highlights the real validated Stage 3 LAB deployment and connects the

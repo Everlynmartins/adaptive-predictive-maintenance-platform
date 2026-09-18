@@ -16,6 +16,12 @@ An engineering demonstrator for estimating the probability of a simulated turbof
 
 Frozen artifacts are served through FastAPI, predictions and alerts are persisted in PostgreSQL, and Streamlit consumes the API. A Terraform-defined AWS LAB was validated through real replay and controlled ECS task replacement.
 
+![Interactive local dashboard demonstration](docs/assets/demo/dashboard_demo.gif)
+
+*Interactive local dashboard demonstration*
+
+The same application was separately deployed and validated on AWS. AWS deployment evidence is shown below through ECS, RDS, E2E and recovery validation.
+
 ## Key capabilities
 
 - Cycle-by-cycle replay with explicit unit, horizon, model and telemetry policy.
@@ -70,7 +76,11 @@ Unit 1, cycle 191, H30: risk, survival, visual health, alert level and model dia
 
 [Additional screenshots](docs/assets/README.md)
 
-<!-- Optional genuine recording: docs/assets/demo/dashboard_demo.gif -->
+![Probability by model — H30 local animation](docs/assets/probability_by_model_h30_from_160.gif)
+
+*Animated excerpt of the local dashboard showing Probability by model at H=30 from cycle 160 to the end of the trajectory.*
+
+Unit 1 · fusion · full telemetry · each_cycle · cycles 160–191 · 5x visual playback. Real browser frames are sampled; no curves or values are reconstructed. [Static poster](docs/assets/probability_by_model_h30_from_160_poster.png).
 
 ## Machine learning
 
